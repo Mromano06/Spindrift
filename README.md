@@ -1,6 +1,6 @@
 # Spindrift
 
-Created, wrtten and developed by Matthew Romano
+Created, written and developed by Matthew Romano
 
 ### Description
 Spindrift is a simple turn based naval combat game that allows the player to control ships, submaries, and oil rigs.
