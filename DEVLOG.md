@@ -8,6 +8,12 @@
 - Created Repository for the game itself
 
 ### v0.0.1
-- Added title screen
-- Added main menu
+- Added very basic title screen
+- Added basic main menu
 - Main menu navigation functional
+
+### v0.0.2
+- Credits can now be displayed within the main menu
+- Rules can also be displayed withing the main menu
+- Within the rules/credits section the user can hit esc to exit them
+- Exit selection in main menu now also exits game
