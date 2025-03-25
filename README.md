@@ -1,6 +1,5 @@
 # Spindrift
 
-### Author
 Created, wrtten and developed by Matthew Romano
 
 ### Description
