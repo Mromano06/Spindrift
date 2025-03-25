@@ -1,5 +1,7 @@
 # Spindrift's Rules
 
+Author: Matthew Romano
+
 ### Brief Overview
 
 This is a turn-based combat game in which the player and their opponenet take turns attack with and moving their pieces.
