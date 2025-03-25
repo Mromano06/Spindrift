@@ -5,7 +5,7 @@ Author: Matthew Romano
 ### Brief Overview
 
 This is a turn-based combat game in which the player and their opponenet take turns attack with and moving their pieces.
-The pieces are layed out on a hexoginal gameboard that shows the pieces locations.
+The pieces are layed out on the gameboard that shows the pieces locations.
 Each piece has different statistics: health, defence, damage, range and movement.
 It is up to the player to use these pieces to defeat and capture the opponent and their pieces.
 The game finishes when a player controls more than 75% of all rigs, or has destroyed all of their opponents pieces.
