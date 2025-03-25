@@ -4,7 +4,7 @@
 // Function declarations for the menus
 
 // makes changing the title easier 
-void printTitle();
+void titleScreen();
 
 // starting point of the main menu
 void mainMenuStart();

@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 // Matthew Romano - March 24th, 2025 - Project Spindrift
 // Menus module implementation using conio.h
@@ -10,21 +11,24 @@
 #define OPTION_NAME_LENGTH		10
 
 // pretty lame right now
-void printTitle() {
+void titleScreen() {
 		printf("\n");
 		printf(" SSSSS   PPPPP  III  N   N  DDDD   RRRR   IIIII  FFFFF  TTTTT\n");
 		printf(" S       P   P   I   NN  N  D   D  R   R    I    F        T\n");
 		printf("  SSS    PPPPP   I   N N N  D   D  RRRR     I    FFFF     T\n");
 		printf("     S   P       I   N  NN  D   D  R  R     I    F        T\n");
 		printf(" SSSSS   P      III  N   N  DDDD   R   R  IIIII  F        T\n");
-		printf("\n");
-	
+		printf("\n\nCreated By: Matthew Romano");
+		Sleep(5000);
 }
 
 // starts the main menu and works as a hub for it
 void mainMenuStart() {
 	int arrowPos = 1;
-	printTitle();
+
+	// prints the title and waits for a couple secs beofre clearing
+	titleScreen();
+
 	// clears window and calls menu for the first time
 	system("cls");
 	mainMenu(arrowPos);
