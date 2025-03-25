@@ -1,4 +1,5 @@
 #include "menus.h"
+#include "rulesAndCredits.h"
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,7 +38,18 @@ void mainMenuStart() {
 	while (1) {
 		int keyPressed = getch(); // takes input
 		switch (keyPressed) {
-		case 27: // escape key
+
+		case 13: // enter key allows for selection
+			if (arrowPos == 3)
+				rules();
+			if (arrowPos == 4)
+				credits();
+			if (arrowPos == 5)
+				exit(EXIT_SUCCESS);
+			mainMenu(arrowPos);
+			break;
+
+		case 27: // escape key quits
 			exit(EXIT_SUCCESS);
 			break;
 
@@ -74,5 +86,7 @@ void mainMenu(int arrowPos) {
 		else
 			printf("    %s\n", options[i]);
 	}
+
+	printf("\n"); // for better formatting
 
 }
