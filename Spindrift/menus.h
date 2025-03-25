@@ -3,7 +3,7 @@
 // Matthew Romano - March 24th, 2025 - Project Spindrift
 // Function declarations for the menus
 
-// makes changing the title easier 
+// makes printing the title easier 
 void titleScreen();
 
 // starting point of the main menu

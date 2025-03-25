@@ -19,7 +19,7 @@ void titleScreen() {
 		printf("     S   P       I   N  NN  D   D  R  R     I    F        T\n");
 		printf(" SSSSS   P      III  N   N  DDDD   R   R  IIIII  F        T\n");
 		printf("\n\nCreated By: Matthew Romano");
-		Sleep(5000);
+		Sleep(3500);
 }
 
 // starts the main menu and works as a hub for it
@@ -60,6 +60,7 @@ void mainMenuStart() {
 // this is seperate so that the user can scroll though menu options
 void mainMenu(int arrowPos) {
 	system("cls");
+	printf("Main Menu\n\n");
 
 	// saves all menu options as an array of strings
 	char options[][OPTION_NAME_LENGTH] = { "New Game",

@@ -21,9 +21,15 @@
     <ClCompile Include="menus.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rulesAndCredits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="menus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rulesAndCredits.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
