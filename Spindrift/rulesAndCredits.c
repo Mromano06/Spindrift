@@ -1,4 +1,4 @@
-#include "rulesAndCredits.h"
+#include "RulesAndCredits.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>

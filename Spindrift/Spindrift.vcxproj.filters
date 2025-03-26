@@ -18,18 +18,18 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="menus.c">
+    <ClCompile Include="Menus.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="rulesAndCredits.c">
+    <ClCompile Include="RulesAndCredits.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menus.h">
+    <ClInclude Include="Menus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rulesAndCredits.h">
+    <ClInclude Include="RulesAndCredits.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
