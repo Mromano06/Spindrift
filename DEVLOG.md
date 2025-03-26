@@ -2,17 +2,17 @@
 
 Author: Matthew Romano
 
-### v0.0.0 (Mar 24, 2025)
+### v0.0.0
 - Created ReadMe and Rules files
 - Added basic rules and a description of the game
 - Created Repository for the game itself
 
-### v0.0.1 (Mar 25, 2025)
+### v0.0.1
 - Added very basic title screen
 - Added basic main menu
 - Main menu navigation functional
 
-### v0.0.2 (Mar 26, 2025 - present)
+### v0.0.2
 - Credits can now be displayed from the main menu
 - Rules can also be displayed from the main menu
 - In the rules/credits section the user can hit esc to exit them
@@ -20,3 +20,8 @@ Author: Matthew Romano
 - Basic GamePiece struct added with non-functional behaviours
 - Changed file naming convention to have capitols at the start of their names
 
+### v0.0.3
+- Behaviours surrounding the game piece strcut have been updated
+- Printing, creating, updating, attack functions all created and/or updated
+- Game board struct added, along with function declarations for its behaviours
+- Moving forward the game board is going to need a lot of work
