@@ -24,12 +24,18 @@
     <ClCompile Include="RulesAndCredits.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GamePiece.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RulesAndCredits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePiece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
