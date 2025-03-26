@@ -7,7 +7,7 @@
 
 // New pieces stats will be decided based on the piece type
 GamePiece createGamePiece(int pieceType) {
-	GamePiece newGamePiece;
+	GamePiece newGamePiece = { 0 };
 	newGamePiece.pieceType = pieceType;
 
 	// TODO: Needs a lot of testing/balancing
@@ -97,4 +97,11 @@ GamePiece updateGamePiece(int hp, int rg, int bd, int df, int mv, int pt) {
 	}
 
 	return updatedPiece;
+}
+
+// will take the health off of a pice that is attacked
+GamePiece attack(GamePiece* attackedPiece, int damageDealt) {
+	attackedPiece->health -= damageDealt;
+
+	return *attackedPiece;
 }

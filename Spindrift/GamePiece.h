@@ -27,3 +27,6 @@ void displayGamePiece(GamePiece toDisplay);
 
 // Probably only used for testing
 GamePiece updateGamePiece(int hp, int rg, int bd, int df, int mv, int pt);
+
+// When a piece attacks another
+GamePiece attack(GamePiece* attackedPiece, int damageDealt);
