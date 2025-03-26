@@ -3,6 +3,8 @@
 // Matthew Romano - March 26th, 2025 - Project Spindrift\
 // Declaration for the game pice struct/functions
 
+#define NUMBER_OF_PIECES	4
+
 // has all the attributes required for a game piece
 typedef struct {
 	int health;
@@ -10,8 +12,7 @@ typedef struct {
 	int baseDamage;
 	int defence;
 	int movement;
-	int range;
-	// 0 = rig, 1 = tugboat, 2 = speedboat, 3 = cargo ship
+	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	int pieceType;
 
 } GamePiece;
@@ -25,4 +26,4 @@ GamePiece createGamePiece(int pieceType);
 void displayGamePiece(GamePiece toDisplay);
 
 // Probably only used for testing
-GamePiece updateGamePiece(GamePiece* toUpdate);
+GamePiece updateGamePiece(int hp, int rg, int bd, int df, int mv, int pt);
