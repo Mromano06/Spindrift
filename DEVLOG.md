@@ -12,7 +12,7 @@ Author: Matthew Romano
 - Added basic main menu
 - Main menu navigation functional
 
-### v0.0.2 (Mar 24, 2025 - present)
+### v0.0.2 (Mar 26, 2025 - present)
 - Credits can now be displayed from the main menu
 - Rules can also be displayed from the main menu
 - In the rules/credits section the user can hit esc to exit them
