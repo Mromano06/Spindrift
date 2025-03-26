@@ -1,6 +1,6 @@
 # Develepment Log
 
- Author: Matthew Romano
+Author: Matthew Romano
 
 ### v0.0.0
 - Created ReadMe and Rules files
@@ -17,3 +17,6 @@
 - Rules can also be displayed withing the main menu
 - Within the rules/credits section the user can hit esc to exit them
 - Exit selection in main menu now also exits game
+- Basic GamePiece struct added with non-functional behaviours
+- Changed file naming convention to have capitols at the start of their names
+
