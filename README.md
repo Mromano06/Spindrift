@@ -2,6 +2,9 @@
 
 Created, written and developed by Matthew Romano
 
+### Disclaimer
+V1.0.0 of spin drift is going to act as a demo of sorts with an entirely text based display. In the future I hope to add graphics and more deatialed gameplay but for now the game will be coded entirely in C using no external graphics libraries.
+
 ### Description
 Spindrift is a simple turn based naval combat game that allows the player to control ships, submaries, and oil rigs.
 Heavily inspired by turn based combat games of old and the board game Battleship. 
