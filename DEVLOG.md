@@ -30,4 +30,5 @@ Author: Matthew Romano
 - Gameboard setup is now possible
 - You can add and remove pieces to/from the game board
 - To do this I added an ID attribute to the game piece structure
-- Gameboard cna also be displayed but this function is very primiative
+- Gameboard can also be displayed but this function is very primiative
+- Added functions to find the x and y coordinates of a piece on the board
