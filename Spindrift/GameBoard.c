@@ -1,4 +1,4 @@
-#include "GameBoard.h"
+#include "Gameboard.h"
 #include <stdio.h>
 
 // Matthew Romano - March 26th, 2025 - Project Spindrift
@@ -44,9 +44,22 @@ Gameboard removePiece(Gameboard* currentBoard, int ID) {
 
 // Prints out the game board's elements
 void displayGameboard(Gameboard toDisplay) {
-	for (int i = 0; i < BOARD_LENGTH; i++) {
-		for (int j = 0; j < BOARD_WIDTH; j++)
-			printf("%d", toDisplay.board[i][j]);
-	}
+	for (int i = 0; i < BOARD_LENGTH*3; i++)
+		printf("~");
+
 	printf("\n");
+	for (int i = 0; i < BOARD_LENGTH; i++) {
+		printf("|");
+		for (int j = 0; j < BOARD_WIDTH; j++) {
+			printf("%d", toDisplay.board[i][j]);
+			if (j == BOARD_WIDTH - 1)
+				printf("|");
+			else
+				printf("  ");
+		}
+			printf("\n");
+	}
+	for (int i = 0; i < BOARD_LENGTH * 3; i++)
+		printf("~");
+	
 }
