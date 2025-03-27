@@ -28,16 +28,13 @@ Gameboard putPiece(Gameboard* currentBoard, int ID, int x, int y) {
 	return *currentBoard;
 }
 
-// Removes piece from the board
-Gameboard removePiece(Gameboard* currentBoard, int ID) {
+// Removes specific piece from the board at certain position
+Gameboard removePiece(Gameboard* currentBoard, int ID, int x, int y) {
 	// Searches the board to find the id of the piece and removes it
-	for (int i = 0; i < BOARD_LENGTH; i++) {
-		for (int j = 0; j < BOARD_WIDTH; j++)
-			if (currentBoard->board[i][j] == ID) {
-				currentBoard->board[i][j] = 0;
-				printf("Piece successfuly removed."); // for testing
-			}
-	}
+	if (currentBoard->board[x][y] == ID)
+		currentBoard->board[x][y] = 0;
+	else
+		printf("Unable to remove piece.");
 
 	return *currentBoard;
 }
@@ -59,7 +56,36 @@ void displayGameboard(Gameboard toDisplay) {
 		}
 			printf("\n");
 	}
+
 	for (int i = 0; i < BOARD_LENGTH * 3; i++)
 		printf("~");
 	
+}
+
+// Finds pieces x coordinate
+int getXofPiece(Gameboard* currentBoard, int ID) {
+	int x;
+
+	// Searches the board to find the x of a piece
+	for (int i = 0; i < BOARD_LENGTH; i++) {
+		for (int j = 0; j < BOARD_WIDTH; j++)
+			if (currentBoard->board[i][j] == ID)
+				return (x = i);	
+	}
+
+	return -1; // no x is found
+}
+
+// Finds pieces x coordinate
+int getYofPiece(Gameboard* currentBoard, int ID) {
+	int y;
+
+	// Searches the board to find the y of a piece
+	for (int i = 0; i < BOARD_LENGTH; i++) {
+		for (int j = 0; j < BOARD_WIDTH; j++)
+			if (currentBoard->board[i][j] == ID)
+				return (y = j);
+	}
+
+	return -1; // no x is found
 }

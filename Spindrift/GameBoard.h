@@ -20,6 +20,14 @@ Gameboard createGameboard();
 Gameboard putPiece(Gameboard* currentBoard, int ID, int x, int y);
 
 // Removes a piece based on its ID
-Gameboard removePiece(Gameboard* currentBoard, int ID);
+Gameboard removePiece(Gameboard* currentBoard, int ID, int x, int y);
 
+// Shows the gameboard
 void displayGameboard(Gameboard toDisplay);
+
+// Finds the x coordinate of a piece
+int getXofPiece(Gameboard* currentBoard, int ID);
+
+// Finds the y coordinate of a piece
+int getYofPiece(Gameboard* currentBoard, int ID);
+
