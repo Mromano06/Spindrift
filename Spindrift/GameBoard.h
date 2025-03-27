@@ -13,8 +13,11 @@ typedef struct {
 
 } Gameboard;
 
+// Game board setup
 Gameboard createGameBoard();
 
-Gameboard addPieceToBoard(Gameboard* currentBoard, GamePiece toAdd);
+// Adds a piece at a specific position
+Gameboard putPiece(Gameboard* currentBoard, int ID, int x, int y);
 
-Gameboard removePieceToBoard(Gameboard* currentBoard, GamePiece toRemove);
+// Removes a piece from a specific position
+Gameboard removePiece(Gameboard* currentBoard, int ID, int x, int y);

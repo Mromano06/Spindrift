@@ -14,6 +14,8 @@ typedef struct {
 	int movement;
 	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	int pieceType;
+	// So that the gameboard knows what piece is what
+	int ID;
 
 } GamePiece;
 
@@ -26,7 +28,7 @@ GamePiece createGamePiece(int pieceType);
 void displayGamePiece(GamePiece toDisplay);
 
 // Probably only used for testing
-GamePiece updateGamePiece(int hp, int rg, int bd, int df, int mv, int pt);
+GamePiece updateGamePiece(int hp, int rg, int bd, int df, int mv, int pt, int ID);
 
 // When a piece attacks another
 GamePiece attack(GamePiece* attackedPiece, int damageDealt);
