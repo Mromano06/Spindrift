@@ -25,3 +25,9 @@ Author: Matthew Romano
 - Printing, creating, updating, attack functions all created and/or updated
 - Game board struct added, along with function declarations for its behaviours
 - Moving forward the game board is going to need a lot of work
+
+### v0.0.4
+- Gameboard setup is now possible
+- You can add and remove pieces to/from the game board
+- To do this I added an ID attribute to the game piece structure
+- Gameboard cna also be displayed but this function is very primiative
