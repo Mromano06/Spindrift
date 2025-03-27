@@ -5,7 +5,7 @@
 // Implementation of the game board and its functions
 
 // Gameboard setup
-Gameboard createGameBoard() {
+Gameboard createGameboard() {
 	// The gameboard is a 2d array of ints that will hold values coresponding to the gampieces
 	Gameboard newBoard;
 	// sets all values of the array to 0 to start
@@ -42,3 +42,11 @@ Gameboard removePiece(Gameboard* currentBoard, int ID) {
 	return *currentBoard;
 }
 
+// Prints out the game board's elements
+void displayGameboard(Gameboard toDisplay) {
+	for (int i = 0; i < BOARD_LENGTH; i++) {
+		for (int j = 0; j < BOARD_WIDTH; j++)
+			printf("%d", toDisplay.board[i][j]);
+	}
+	printf("\n");
+}
