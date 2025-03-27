@@ -8,9 +8,6 @@
 // Matthew Romano - March 24th, 2025 - Project Spindrift
 // Menus module implementation using conio.h
 
-#define MENU_OPTIONS			5
-#define OPTION_NAME_LENGTH		10
-
 // pretty lame right now
 void titleScreen() {
 		printf("\n");
