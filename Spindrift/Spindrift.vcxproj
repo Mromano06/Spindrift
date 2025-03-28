@@ -130,7 +130,7 @@
     <ClCompile Include="GameBoard.c" />
     <ClCompile Include="GamePiece.c" />
     <ClCompile Include="Gameplay.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="Main.c" />
     <ClCompile Include="Menus.c" />
     <ClCompile Include="RulesAndCredits.c" />
   </ItemGroup>
