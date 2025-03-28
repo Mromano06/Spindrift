@@ -32,3 +32,9 @@ Author: Matthew Romano
 - To do this I added an ID attribute to the game piece structure
 - Gameboard can also be displayed but this function is very primiative
 - Added functions to find the x and y coordinates of a piece on the board
+
+### v0.0.5
+- Getting close to a v0.1.0 but will hold of until more of the front end is complete
+- Added linked list for store the pieces dynamically
+- Added some functions for the linked list
+- Removed redundant features
