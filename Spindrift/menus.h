@@ -1,4 +1,5 @@
 #pragma once
+#include "RulesAndCredits.h"
 
 // Matthew Romano - March 24th, 2025 - Project Spindrift
 // Function declarations for the menus

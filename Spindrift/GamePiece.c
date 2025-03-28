@@ -1,6 +1,7 @@
 #include "GamePiece.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 // Matthew Romano - March 26th, 2025 - Project Spindrift
 // Implementation of game pieces functions
@@ -81,30 +82,18 @@ void displayGamePiece(GamePiece toDisplay) {
 			toDisplay.movement);
 }
 
-// Sets all these values to a game piece
-GamePiece updateGamePiece(int hp, int rg, int bd, int df, int mv, int pt, int ID) {
-	GamePiece updatedPiece;
-
-	updatedPiece.health = hp;
-	updatedPiece.range = rg;
-	updatedPiece.baseDamage = bd;
-	updatedPiece.defence = df;
-	updatedPiece.movement = mv;
-	updatedPiece.pieceType = pt;
-	updatedPiece.pieceType = ID;
-
-	if (pt > NUMBER_OF_PIECES || pt < 1) {
-		printf("Error, invalid piece type");
-		exit(EXIT_FAILURE); // for now this is all that can really be done
-	}
-
-	return updatedPiece;
-}
-
 // TODO: determine if this is better here or a seperate combat function
 // will take the health off of a piece that is attacked
 GamePiece attack(GamePiece* attackedPiece, int damageDealt) {
 	attackedPiece->health -= damageDealt;
 
 	return *attackedPiece;
+}
+
+// Checks to see if two pieces are the same based on ID
+bool comparePieces(GamePiece lhs, GamePiece rhs) {
+	if (lhs.ID == rhs.ID)
+		return true;
+
+	return false;
 }

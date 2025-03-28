@@ -1,4 +1,5 @@
 #pragma once
+#include <stdbool.h>
 
 // Matthew Romano - March 26th, 2025 - Project Spindrift\
 // Declaration for the game pice struct/functions
@@ -27,8 +28,8 @@ GamePiece createGamePiece(int pieceType);
 // Displays game piece for testing (and other cases)
 void displayGamePiece(GamePiece toDisplay);
 
-// Probably only used for testing
-GamePiece updateGamePiece(int hp, int rg, int bd, int df, int mv, int pt, int ID);
-
 // When a piece attacks another
 GamePiece attack(GamePiece* attackedPiece, int damageDealt);
+
+// Compares two pieces
+bool comparePieces(GamePiece lhs, GamePiece rhs);
