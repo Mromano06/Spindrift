@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="GameBoard.c" />
     <ClCompile Include="GamePiece.c" />
+    <ClCompile Include="Gameplay.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Menus.c" />
     <ClCompile Include="RulesAndCredits.c" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Gameboard.h" />
     <ClInclude Include="GamePiece.h" />
+    <ClInclude Include="Gameplay.h" />
     <ClInclude Include="Menus.h" />
     <ClInclude Include="RulesAndCredits.h" />
   </ItemGroup>
