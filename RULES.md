@@ -12,7 +12,9 @@ The game finishes when a player controls more than 75% of all rigs, or has destr
 
 ### How The Game Works
 
-The players take turns moving and attacking.
+To start the player choses thier pieces and can purchase them with the alloted bugdet.
+They then place thier pieces on a limited part of the board.
+The players then take turns moving and attacking.
 Each piece can be moved once or attack once per turn.
 You cannot attack with and move the same piece in the same turn.
 Once you have made all moves or chose to pass your turn the turn is passed to the opponent.
@@ -42,6 +44,7 @@ Defence: Medium
 Danage: Medium  
 Movement: Medium  
 Range: Low
+Cost: 20
 
 **Container Ship**  
 Health: High  
@@ -49,6 +52,7 @@ Defence: High
 Damage: Low  
 Movement: Low  
 Range: Medium  
+Cost: 40
 
 **Speed Boat**  
 Health: Low  
@@ -56,13 +60,15 @@ Defence: Low
 Damage: High  
 Movement: High  
 Range: High  
+Cost: 10
 
 **Oil Rig**  
 Health: Very High  
 Defence: Medium  
 Damage: Very Low  
 Movement: N/A  
-Range: Low  
+Range: Low
+Cost: N/A
 
 ### Board Overview
 
@@ -70,6 +76,7 @@ This still needs to be fleshed out.
 
 ### Additional Notes
 While the oil rig cant move it can still fight back against attacker, although it is extremely weak.
+Budget is currentlry set to 100.
 
 
 
