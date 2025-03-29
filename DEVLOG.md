@@ -36,8 +36,5 @@ Author: Matthew Romano
 ### v0.0.5
 - Getting close to a v0.1.0 but will hold of until more of the front end is complete
 - Added linked list for store the pieces dynamically
-- Linked list can add node, remove node, and print all nodes (for testing)
-- Not usre yet if I will use 1 or two linked lists (for the player and enemies pieces)
+- Added some functions for the linked list
 - Removed redundant features
-- Minor bug fixes
-
