@@ -12,8 +12,6 @@ The game finishes when a player controls more than 75% of all rigs, or has destr
 
 ### How The Game Works
 
-To begin the player is given a budget to buy ships.
-Once they decide they are ready (or run out of money) the game begins.
 The players take turns moving and attacking.
 Each piece can be moved once or attack once per turn.
 You cannot attack with and move the same piece in the same turn.
