@@ -11,7 +11,7 @@
 void titleScreen();
 
 // starting point of the main menu
-void mainMenuStart();
+int mainMenuStart();
 
 // used to change selected option over and over
 void mainMenu(int arrowPos);

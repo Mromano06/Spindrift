@@ -20,7 +20,7 @@ void titleScreen() {
 }
 
 // starts the main menu and works as a hub for it
-void mainMenuStart() {
+int mainMenuStart() {
 	int arrowPos = 1;
 
 	// prints the title and waits for a couple secs beofre clearing
@@ -36,6 +36,10 @@ void mainMenuStart() {
 		switch (keyPressed) {
 
 		case 13: // enter key allows for selection
+			if (arrowPos == 1)
+				return arrowPos; // 1 for new game
+			if (arrowPos == 2)
+				return arrowPos; // 2 for load game
 			if (arrowPos == 3)
 				rules();
 			if (arrowPos == 4)

@@ -33,6 +33,9 @@
     <ClCompile Include="Gameplay.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ListOfPieces.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menus.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Gameplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListOfPieces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
