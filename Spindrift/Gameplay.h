@@ -20,5 +20,8 @@ void removePieceFromList(ListOfPieces** head, GamePiece toRemove);
 // Prints out all pieces
 void showPiecesInList(ListOfPieces* head, GamePiece toFind);
 
+// Player choses pieces
+void playerPieceSelection();
+
 // Sets up the game
 void startGame();

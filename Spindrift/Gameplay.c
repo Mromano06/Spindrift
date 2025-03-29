@@ -54,9 +54,14 @@ void showPiecesInList(ListOfPieces* head, GamePiece toFind) {
 
 }
 
+// Player will chose there pieces here
+void playerPieceSelection() {
+
+}
+
+
 // Handles game setup
 // TODO: Add difficulty and game length
-// TODO: Either decide the amount of each piece, make a linked list to store them
 void startGame() {
 	mainMenuStart();
 	Gameboard gameboard = createGameboard();
