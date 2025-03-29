@@ -1,5 +1,4 @@
 #include "Menus.h"
-#include "RulesAndCredits.h"
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
