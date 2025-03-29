@@ -1,4 +1,4 @@
-// #include "ListOfPieces.h"
+#include "ListOfPieces.h"
 #include <stdio.h>
 #include <stdlib.h>
 

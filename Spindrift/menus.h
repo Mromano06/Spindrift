@@ -17,7 +17,7 @@
 void titleScreen();
 
 // For style
-void hideCursor() {
+void hideCursor();
 
 // Starting point of the main menu
 int mainMenuStart();

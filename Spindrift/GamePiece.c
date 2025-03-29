@@ -1,4 +1,4 @@
-// #include "GamePiece.h"
+#include "GamePiece.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

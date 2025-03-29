@@ -1,7 +1,7 @@
 #include "RulesAndCredits.h"
 #include <stdio.h>
 #include <stdlib.h>
-//#include <conio.h>
+#include <conio.h>
 
 // Matthew Romano - March 25th, 2025 - Project Spindrift
 // Functions to display the credits and rules for the game
