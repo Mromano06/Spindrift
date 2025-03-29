@@ -23,7 +23,7 @@ void titleScreen() {
 int mainMenuStart() {
 	int arrowPos = 1;
 
-	// prints the title and waits for a couple secs beofre clearing
+	// prints the title and waits for a couple secs before clearing
 	titleScreen();
 
 	// clears window and calls menu for the first time
@@ -55,12 +55,12 @@ int mainMenuStart() {
 
 		case 72: // up arrow
 			if (arrowPos == 1) // loops back around
-				arrowPos = MENU_OPTIONS + 1;
+				arrowPos = MAIN_MENU_OPTIONS + 1;
 			mainMenu(--arrowPos);
 			break;
 
 		case 80: // down arrow
-			if (arrowPos == 5) // loops back around also
+			if (arrowPos == MAIN_MENU_OPTIONS) // loops back around
 				arrowPos = 0;
 			mainMenu(++arrowPos);
 			break;
@@ -79,7 +79,7 @@ void mainMenu(int arrowPos) {
 		"Load Game", "Rules", "Credits", "Exit" };
 
 	// prints out menu options 1 by 1
-	for (int i = 0; i < MENU_OPTIONS; i++) {
+	for (int i = 0; i < MAIN_MENU_OPTIONS; i++) {
 		if (arrowPos == i + 1)  // print arrow if at that position
 			printf("--> %s\n", options[i]);
 
@@ -89,4 +89,26 @@ void mainMenu(int arrowPos) {
 
 	printf("\n"); // for better formatting
 
+}
+
+// Menu for player piece selection
+void pieceSelectionMenu(int arrowPos) {
+	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
+	system("cls");
+	printf("Ship Selection Menu\n\n");
+
+	// saves all menu options as an array of strings
+	char options[][OPTION_NAME_LENGTH] = { "Speedboat",
+		"Tugboat", "Container ship" };
+
+	// prints out menu options 1 by 1
+	for (int i = 0; i < SELECTION_MENU_OPTIONS; i++) {
+		if (arrowPos == i + 1)  // print arrow if at that position
+			printf("--> %s\n", options[i]);
+
+		else
+			printf("    %s\n", options[i]);
+	}
+
+	printf("\n"); // for better formatting
 }

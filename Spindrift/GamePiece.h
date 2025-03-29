@@ -15,12 +15,10 @@ typedef struct {
 	int movement;
 	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	int pieceType;
-	// So that the gameboard knows what piece is what
+	// ID for players pieces (11-21), enemies pieces (0-10)
 	int ID;
 
 } GamePiece;
-
-// For now I just need to create and show the pieces
 
 // New pieces stats will be decided based on the piece type
 GamePiece createGamePiece(int pieceType);
