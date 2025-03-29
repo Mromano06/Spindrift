@@ -6,10 +6,10 @@
 // Function declarations for the gameplay
 
 // Linked list to hold every piece
-typedef struct {
+typedef struct ListOfPieces {
 	GamePiece pieceData;
-	ListOfPieces* next;
-}ListOfPieces;
+	struct ListOfPieces* next;
+} ListOfPieces;
 
 // Add a piece to the list
 ListOfPieces* addPieceToList(GamePiece toAdd);

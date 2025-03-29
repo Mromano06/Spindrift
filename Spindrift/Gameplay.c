@@ -1,4 +1,5 @@
 #include "Gameplay.h"
+#include "Menus.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -57,6 +58,7 @@ void showPiecesInList(ListOfPieces* head, GamePiece toFind) {
 // TODO: Add difficulty and game length
 // TODO: Either decide the amount of each piece, make a linked list to store them
 void startGame() {
+	mainMenuStart();
 	Gameboard gameboard = createGameboard();
 	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 }
