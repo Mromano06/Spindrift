@@ -10,23 +10,34 @@
 ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 	int arrowPos = 1;
 	int currentID = 11;
+	int currentBudget = PLAYER_BUDGET;
+	
+	system("cls");
+	pieceSelectionMenu(arrowPos);
+
 	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	while (1) {
 		int keyPressed = getch(); // takes input
 		switch (keyPressed) {
 
-		case 13: // enter key allows for selection
-			if (arrowPos == 1)
-				return arrowPos; // 1 for new game
-			if (arrowPos == 2)
-				return arrowPos; // 2 for load game
-			if (arrowPos == 3)
-				rules();
-			if (arrowPos == 4)
-				credits();
-			if (arrowPos == 5)
-				exit(EXIT_SUCCESS);
-			mainMenu(arrowPos);
+		case 13: // enter key
+			if (arrowPos == 1 && currentBudget >= SPEEDBOAT_COST) {
+				playersPieces = addPieceToList(createGamePiece(2)); // 2 is for speedboat
+				currentBudget -= SPEEDBOAT_COST;
+			}
+			if (arrowPos == 2 && currentBudget >= TUGBOAT_COST) {
+				playersPieces = addPieceToList(createGamePiece(3)); // 3 is for tugboat
+				currentBudget -= TUGBOAT_COST;
+			}
+			if (arrowPos == 3 && currentBudget >= CONTAINER_SHIP_COST) {
+				playersPieces = addPieceToList(createGamePiece(4)); // 4 is for con ship
+				currentBudget -= CONTAINER_SHIP_COST;
+			}
+			if (arrowPos == 3 && currentBudget >= CONTAINER_SHIP_COST) {
+				playersPieces = addPieceToList(createGamePiece(4)); // 4 is for con ship
+				currentBudget -= CONTAINER_SHIP_COST;
+			}
+			pieceSelectionMenu(arrowPos);
 			break;
 
 		case 27: // escape key quits
@@ -36,13 +47,13 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 		case 72: // up arrow
 			if (arrowPos == 1) // loops back around
 				arrowPos = SELECTION_MENU_OPTIONS + 1;
-			mainMenu(--arrowPos);
+			pieceSelectionMenu(--arrowPos);
 			break;
 
 		case 80: // down arrow
 			if (arrowPos == SELECTION_MENU_OPTIONS) // loops back around
 				arrowPos = 0;
-			mainMenu(++arrowPos);
+			pieceSelectionMenu(++arrowPos);
 			break;
 
 		}
@@ -55,11 +66,12 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 // TODO: Add difficulty and game length
 void startGame() {
 	Gameboard gameboard = createGameboard(); 
-	ListOfPieces *playersPieces, *enemiesPieces;
+	ListOfPieces* playersPieces = (ListOfPieces*)malloc(sizeof(ListOfPieces));
+	ListOfPieces* enemiesPieces = (ListOfPieces*)malloc(sizeof(ListOfPieces));
 
 	// Returns 0 for new game and 1 for load game
 	if (mainMenuStart() == 1) {
-		playerPieceSelection(playersPieces);
+		pieceSelection(playersPieces);
 		// enemyPieceSelection(playersPieces);
 	}
 	else {
