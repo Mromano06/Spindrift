@@ -121,7 +121,7 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 	// prints out menu options 1 by 1
 	for (int i = 0; i < SELECTION_MENU_OPTIONS; i++) {
 		if (arrowPos == i + 1)  // print arrow if at that position
-			printf("--> %s\n", options[i]);
+			printf("--> %s", options[i]);
 
 		else
 			printf("    %s", options[i]);
