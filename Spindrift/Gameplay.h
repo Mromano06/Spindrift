@@ -1,4 +1,5 @@
 #pragma once
+#include "Gameboard.h"
 #include "ListOfPieces.h"
 
 // Matthew Romano - March 27th, 2025 - Project Spindrift
