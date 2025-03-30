@@ -1,8 +1,9 @@
-#include "Menus.h"
+//#include "Menus.h"
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include "Menus.h"
 
 // Matthew Romano - March 24th, 2025 - Project Spindrift
 // Menus module implementation using conio.h
@@ -19,14 +20,27 @@ void titleScreen() {
 		Sleep(3500);
 }
 
+// Hides the cursor for a better look
+void hideCursor() {
+	// Gets handle of the console
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	// Create a cursor info struct and hide it
+	CONSOLE_CURSOR_INFO cursorInfo;
+	cursorInfo.dwSize = 1;
+	cursorInfo.bVisible = FALSE;
+
+	// Send the settings to the system
+	SetConsoleCursorInfo(handle, &cursorInfo);
+
+}
+
 // starts the main menu and works as a hub for it
 int mainMenuStart() {
 	int arrowPos = 1;
 
-	// prints the title and waits for a couple secs before clearing
+	hideCursor();
 	titleScreen();
-
-	// clears window and calls menu for the first time
 	system("cls");
 	mainMenu(arrowPos);
 
@@ -92,23 +106,38 @@ void mainMenu(int arrowPos) {
 }
 
 // Menu for player piece selection
-void pieceSelectionMenu(int arrowPos) {
+void pieceSelectionMenu(int arrowPos, int currentBudget) {
 	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	system("cls");
 	printf("Ship Selection Menu\n\n");
+	printf("Remaining Budget: %d\n\n", currentBudget);
 
 	// saves all menu options as an array of strings
 	char options[][OPTION_NAME_LENGTH] = { "Speedboat",
-		"Tugboat", "Container ship" };
+		"Tugboat", "Container", "Finish Seletion" };
 
 	// prints out menu options 1 by 1
 	for (int i = 0; i < SELECTION_MENU_OPTIONS; i++) {
 		if (arrowPos == i + 1)  // print arrow if at that position
-			printf("--> %s\n", options[i]);
+			printf("--> %s", options[i]);
 
 		else
-			printf("    %s\n", options[i]);
+			printf("    %s", options[i]);
+
+
+		// shows the cost with the ships
+		if (i == 0)
+			printf("     %d", SPEEDBOAT_COST);
+		else if (i == 1)
+			printf("       %d", TUGBOAT_COST);
+		else if (i == 2) {
+			printf("     %d", CONTAINER_SHIP_COST);
+			printf("\n"); // For better seperation
+		}
+
+		printf("\n");
+
 	}
 
-	printf("\n"); // for better formatting
+	printf("\nPress esc or select (Finish selection) to continue"); // for better formatting
 }

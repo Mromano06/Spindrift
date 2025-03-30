@@ -36,5 +36,15 @@ Author: Matthew Romano
 ### v0.0.5
 - Getting close to a v0.1.0 but will hold of until more of the front end is complete
 - Added linked list for store the pieces dynamically
-- Added some functions for the linked list
+- Linked list can add node, remove node, and print all nodes (for testing)
+- Not sure yet if I will use 1 or two linked lists (for the player and enemies pieces)
 - Removed redundant features
+- Minor bug fixes
+
+### v0.1.0
+- I am confident in making this the 0.1.0 update because the player can now select new/load game
+- Selecting new game will allow the player to then select thier ships
+- Load game is non-functional for now
+- Seleting/buying ships stores them into a linked list to be used later
+- Major Bug fix, solution was broken but found bug with the "menus.h" file inclusion
+- Cursor is hidden while the game is running
