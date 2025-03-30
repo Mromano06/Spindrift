@@ -45,6 +45,13 @@ Author: Matthew Romano
 - I am confident in making this the 0.1.0 update because the player can now select new/load game
 - Selecting new game will allow the player to then select thier ships
 - Load game is non-functional for now
-- Seleting/buying ships stores them into a linked list to be used later
+- Selecting/buying ships stores them into a linked list to be used later
 - Major Bug fix, solution was broken but found bug with the "menus.h" file inclusion
 - Cursor is hidden while the game is running
+
+- ### v0.1.1
+- The user must now select at least 1 piece during the piece selection menu
+- The AI now select pieces at random (for now this is how that will be handled)
+- The players and enemies oil's rigs will now be created during piece setup
+- Added definitons for ID modifiers (players rigs, enemies rigs, players pieces, enimies pieces)
+- Minor visual bug fixes
