@@ -169,6 +169,17 @@ ListOfPieces* enemyPieceSelection(ListOfPieces* enemiesPieces) {
 	return enemiesPieces;
 }
 
+// Allows the players to place their pieces
+Gameboard placePlayersPieces(Gameboard gameboard, ListOfPieces* toPlace) {
+
+	return gameboard;
+}
+
+// Places the AI's pieces
+Gameboard placeEnemiesPieces(Gameboard gameboard, ListOfPieces* toPlace) {
+
+	return gameboard;
+}
 
 // Handles game setup
 // TODO: Add difficulty and game length
