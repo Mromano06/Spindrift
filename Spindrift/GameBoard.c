@@ -18,7 +18,7 @@ Gameboard createGameboard() {
 }
 
 // Sets the gameBoard to hold the gamepiece's ID at a position
-Gameboard putPiece(Gameboard* currentBoard, int ID, int x, int y) {
+Gameboard placePiece(Gameboard* currentBoard, int ID, int x, int y) {
 	// Sets the ID to a certain position
 	if (currentBoard->board[x][y] == 0) 
 		currentBoard->board[x][y] = ID;
@@ -29,14 +29,14 @@ Gameboard putPiece(Gameboard* currentBoard, int ID, int x, int y) {
 }
 
 // Removes specific piece from the board at certain position
-Gameboard removePiece(Gameboard* currentBoard, int ID, int x, int y) {
+Gameboard* removePiece(Gameboard* currentBoard, int ID, int x, int y) {
 	// Searches the board to find the id of the piece and removes it
 	if (currentBoard->board[x][y] == ID)
 		currentBoard->board[x][y] = 0;
 	else
 		printf("Unable to remove piece.");
 
-	return *currentBoard;
+	return currentBoard;
 }
 
 // Prints out the game board's elements

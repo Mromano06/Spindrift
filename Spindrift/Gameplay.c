@@ -169,13 +169,27 @@ ListOfPieces* enemyPieceSelection(ListOfPieces* enemiesPieces) {
 	return enemiesPieces;
 }
 
+// TODO: Add coordinate struct and a function to check if a spot is empty
 // Allows the players to place their pieces
-Gameboard placePlayersPieces(Gameboard gameboard, ListOfPieces* toPlace) {
+// 75 for left, 77 for right, 72 for up, 80 for down, 27 for esc, 13 for enter
+Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
+	ListOfPieces* current = toPlace;
+	int x = 0, y = 0;
+
+	while (toPlace != NULL) {
+		current->pieceData.ID;
+		// Get coordinates of requested piece placement
+		// compare to gameboard and see if the spot is taken
+		// place if it is free and don't if it isnt
+		// move to next piece if placement was successful
+		gameboard = placePiece(gameboard, current->pieceData.ID, x, y);
+		
+	}
 
 	return gameboard;
 }
 
-// Places the AI's pieces
+// Places the AI's pieces  
 Gameboard placeEnemiesPieces(Gameboard gameboard, ListOfPieces* toPlace) {
 
 	return gameboard;

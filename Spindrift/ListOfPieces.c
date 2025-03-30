@@ -42,6 +42,20 @@ void removePieceFromList(ListOfPieces** head, GamePiece toRemove) {
 	printf("Piece not found");
 }
 
+// Returns the number of pieces
+// TODO: Determine wether or not this is redundant
+int getNumberOfPieces(ListOfPieces* head) {
+	ListOfPieces* current = head;
+	int numberOfPieces = 0;
+
+	while (current != NULL) {
+		numberOfPieces++;  // Increments for each piece
+		current = current->next;
+	}
+
+	return numberOfPieces;
+}
+
 // Prints the whole list
 void showPiecesInList(ListOfPieces* head, GamePiece toFind) {
 	ListOfPieces* current = head;

@@ -16,5 +16,8 @@ ListOfPieces* addPieceToList(GamePiece toAdd);
 // Removes a piece from the list
 void removePieceFromList(ListOfPieces** head, GamePiece toRemove);
 
+// Returns the number of pieces
+int getNumberOfPieces(ListOfPieces* head);
+
 // Prints out all pieces
 void showPiecesInList(ListOfPieces* head, GamePiece toFind);
