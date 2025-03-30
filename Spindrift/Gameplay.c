@@ -13,9 +13,9 @@
 // Player will chose there pieces here
 // TODO: Add a check to make sure the player has at minimum 1 Piece
 ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
-	int arrowPos = 1; // Starts at top of the menu
 	int currentID = PLAYER_PIECE_ID_MODIFIER;
 	int currentBudget = PIECE_BUDGET;
+	int arrowPos = 1; // Starts at top of the menu
 	GamePiece temp; // Needed to set ID
 
 	// Creates the oil rigs before anything else
@@ -77,18 +77,32 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 			if (arrowPos == 4) {
-				printf("\n\nPiece selection confirmed");
-				Sleep(750);
-				return playersPieces;
+				if (currentBudget == PIECE_BUDGET) { // Makes sure 1 piece is selected
+					printf("\n\nPlease select at least 1 piece");
+					Sleep(750);
+				}
+				else {
+					printf("\n\nPiece selection confirmed");
+					Sleep(750);
+					return playersPieces;
+				}
 			}
 
 			pieceSelectionMenu(arrowPos, currentBudget);
 			break;
 
 		case 27: // escape key quits
-			printf("Piece selection confirmed");
-			exit(EXIT_SUCCESS);
-			break;
+			if (currentBudget == PIECE_BUDGET) { // Makes sure 1 piece is selected
+				printf("\n\nPlease select at least 1 piece");
+				Sleep(750);
+				pieceSelectionMenu(arrowPos, currentBudget);
+				break;
+			}
+			else {
+				printf("Piece selection confirmed");
+				exit(EXIT_SUCCESS);
+				break;
+			}
 
 		case 72: // up arrow
 			if (arrowPos == 1) // loops back around
