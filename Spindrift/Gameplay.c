@@ -11,10 +11,12 @@
 // Implementation of the gameplay
 
 // Player will chose there pieces here
+// TODO: Add a check to make sure the player has at minimum 1 Piece
 ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 	int arrowPos = 1;
 	int currentID = 11;
 	int currentBudget = PIECE_BUDGET;
+	GamePiece temp; // Needed to set ID
 	
 	system("cls");
 	pieceSelectionMenu(arrowPos, currentBudget);
@@ -26,8 +28,11 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 
 		case 13: // enter key
 			if (arrowPos == 1 && currentBudget >= SPEEDBOAT_COST) {
-				playersPieces = addPieceToList(createGamePiece(2)); // 2 is for speedboat
+				temp = createGamePiece(2); // 2 is for speedboat
+				temp.ID = currentID;
+				playersPieces = addPieceToList(temp);
 				currentBudget -= SPEEDBOAT_COST;
+				currentID++; // Increment the ID upon piece creation
 				printf("\n\nSpeedboat selected");
 				Sleep(750);
 			}
@@ -37,8 +42,11 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 			if (arrowPos == 2 && currentBudget >= TUGBOAT_COST) {
-				playersPieces = addPieceToList(createGamePiece(3)); // 3 is for tugboat
+				temp = createGamePiece(3); // 3 is for tugboat
+				temp.ID = currentID;
+				playersPieces = addPieceToList(temp);
 				currentBudget -= TUGBOAT_COST;
+				currentID++; // Increment the ID upon piece creation
 				printf("\n\nTugboat selected");
 				Sleep(750);
 			}
@@ -48,8 +56,11 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 			if (arrowPos == 3 && currentBudget >= CONTAINER_SHIP_COST) {
-				playersPieces = addPieceToList(createGamePiece(4)); // 4 is for con ship
+				temp = createGamePiece(4);  // 4 is for container ship
+				temp.ID = currentID;
+				playersPieces = addPieceToList(temp);
 				currentBudget -= CONTAINER_SHIP_COST;
+				currentID++; // Increment the ID upon piece creation
 				printf("\n\nContainer ship selected");
 				Sleep(750);
 			}
@@ -68,7 +79,7 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			break;
 
 		case 27: // escape key quits
-			printf("\n\nPiece selection confirmed");
+			printf("Piece selection confirmed");
 			exit(EXIT_SUCCESS);
 			break;
 
@@ -85,33 +96,49 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			break;
 
 		}
+
 	}
 
 	return NULL; // Dont need this but just in case
 }
 
+// AI piece selection
+//TODO: Refine the piece selection for the AI 
 ListOfPieces* ePieceSelection(ListOfPieces* enemiesPieces) {
 	int currentID = 0;
 	int currentBudget = PIECE_BUDGET;
 	int selection = 0;
+	GamePiece temp; // So ID can be incremented
 
 		while (currentBudget > 0) {
 			selection = (rand() % (NUMBER_OF_PIECES)) + 1;
 
-			if (selection == 1 && currentBudget <= SPEEDBOAT_COST) {
-				enemiesPieces = addPieceToList(createGamePiece(2)); // 2 for speedboat
+			if (selection == 1 && currentBudget >= SPEEDBOAT_COST) {
+				temp = createGamePiece(2); // 2 is for speedboat
+				temp.ID = currentID;
+				enemiesPieces = addPieceToList(temp);
 				currentBudget -= SPEEDBOAT_COST;
+				currentID++; // Increment the ID upon piece creation
 			}
-			if (selection == 2 && currentBudget <= TUGBOAT_COST) {
-				enemiesPieces = addPieceToList(createGamePiece(3)); // 3 for tugboat
-				currentBudget -= SPEEDBOAT_COST;
+
+			if (selection == 2 && currentBudget >= TUGBOAT_COST) {
+				temp = createGamePiece(3); // 3 is for tugboat
+				temp.ID = currentID;
+				enemiesPieces = addPieceToList(temp);
+				currentBudget -= TUGBOAT_COST;
+				currentID++; // Increment the ID upon piece creation
 			}
-			if (selection == 3 && currentBudget <= CONTAINER_SHIP_COST) {
-				enemiesPieces = addPieceToList(createGamePiece(4)); // 4 for container ship
-				currentBudget -= SPEEDBOAT_COST;
-			}
-			
-	}
+
+			if (selection == 3 && currentBudget >= CONTAINER_SHIP_COST) {
+				temp = createGamePiece(4); // 4 is for container ship
+				temp.ID = currentID;
+				enemiesPieces = addPieceToList(temp);
+				currentBudget -= CONTAINER_SHIP_COST;
+				currentID++; // Increment the ID upon piece creation
+			}	
+		}
+
+	return enemiesPieces;
 }
 
 
