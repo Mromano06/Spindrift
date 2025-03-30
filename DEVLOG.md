@@ -54,4 +54,6 @@ Author: Matthew Romano
 - The AI now select pieces at random (for now this is how that will be handled)
 - The players and enemies oil's rigs will now be created during piece setup
 - Added definitons for ID modifiers (players rigs, enemies rigs, players pieces, enimies pieces)
+- Began development for piece placement at the beginning of the game
+- Added feature to count the amount of pieces (may be redundant)
 - Minor visual bug fixes
