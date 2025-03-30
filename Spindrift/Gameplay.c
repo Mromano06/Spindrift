@@ -13,10 +13,17 @@
 // Player will chose there pieces here
 // TODO: Add a check to make sure the player has at minimum 1 Piece
 ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
-	int arrowPos = 1;
-	int currentID = 11;
+	int arrowPos = 1; // Starts at top of the menu
+	int currentID = PLAYER_PIECE_ID_MODIFIER;
 	int currentBudget = PIECE_BUDGET;
 	GamePiece temp; // Needed to set ID
+
+	// Creates the oil rigs before anything else
+	for (int i = 0; i < MAX_RIGS; i++) {
+		temp = createGamePiece(1); // 1 for rig
+		temp.ID = PLAYER_RIG_ID_MODIFIER + i;
+		playersPieces = addPieceToList(temp);
+	}
 	
 	system("cls");
 	pieceSelectionMenu(arrowPos, currentBudget);
@@ -104,11 +111,18 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 
 // AI piece selection
 //TODO: Refine the piece selection for the AI 
-ListOfPieces* ePieceSelection(ListOfPieces* enemiesPieces) {
-	int currentID = 0;
+ListOfPieces* enemyPieceSelection(ListOfPieces* enemiesPieces) {
+	int currentID = ENEMY_PIECE_ID_MODIFIER;
 	int currentBudget = PIECE_BUDGET;
 	int selection = 0;
 	GamePiece temp; // So ID can be incremented
+
+	// Creates the oil rigs before anything else
+	for (int i = 0; i < MAX_RIGS; i++) {
+		temp = createGamePiece(1); // 1 for rig
+		temp.ID = ENEMY_RIG_ID_MODIFIER + i;
+		enemiesPieces = addPieceToList(temp);
+	}
 
 		while (currentBudget > 0) {
 			selection = (rand() % (NUMBER_OF_PIECES)) + 1;
@@ -154,7 +168,8 @@ void startGame() {
 	if (mainMenuStart() == 1) {
 		pieceSelection(playersPieces);
 		// This is where a difficulty could be added
-		ePieceSelection(enemiesPieces);
+		enemyPieceSelection(enemiesPieces);
+
 	}
 	else {
 		// loadGameSetup(); 
