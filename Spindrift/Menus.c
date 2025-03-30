@@ -17,7 +17,22 @@ void titleScreen() {
 		printf("     S   P       I   N  NN  D   D  R  R     I    F        T\n");
 		printf(" SSSSS   P      III  N   N  DDDD   R   R  IIIII  F        T\n");
 		printf("\n\nCreated By: Matthew Romano");
-		Sleep(3500);
+		Sleep(3000);
+}
+
+// Hides the cursor for a better look
+void hideCursor() {
+	// Gets handle of the console
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	// Create a cursor info struct and hide it
+	CONSOLE_CURSOR_INFO cursorInfo;
+	cursorInfo.dwSize = 1;
+	cursorInfo.bVisible = FALSE;
+
+	// Send the settings to the system
+	SetConsoleCursorInfo(handle, &cursorInfo);
+
 }
 
 // starts the main menu and works as a hub for it
