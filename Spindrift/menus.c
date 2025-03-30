@@ -17,7 +17,7 @@ void titleScreen() {
 		printf("     S   P       I   N  NN  D   D  R  R     I    F        T\n");
 		printf(" SSSSS   P      III  N   N  DDDD   R   R  IIIII  F        T\n");
 		printf("\n\nCreated By: Matthew Romano");
-		Sleep(3500);
+		Sleep(3000);
 }
 
 // Hides the cursor for a better look
@@ -41,6 +41,8 @@ int mainMenuStart() {
 
 	hideCursor();
 	titleScreen();
+
+	// clears window and calls menu for the first time
 	system("cls");
 	mainMenu(arrowPos);
 
@@ -139,5 +141,5 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 
 	}
 
-	printf("\nPress esc or select (Finish selection) to continue"); // for better formatting
+	printf("\n"); // for better formatting
 }
