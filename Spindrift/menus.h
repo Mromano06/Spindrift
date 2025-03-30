@@ -8,7 +8,7 @@
 #define MAIN_MENU_OPTIONS			  5
 #define SELECTION_MENU_OPTIONS		  4
 #define OPTION_NAME_LENGTH			 20
-#define PLAYER_BUDGET				100
+#define PIECE_BUDGET				100
 #define SPEEDBOAT_COST				 10
 #define TUGBOAT_COST				 20
 #define CONTAINER_SHIP_COST			 40
