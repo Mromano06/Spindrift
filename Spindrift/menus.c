@@ -17,7 +17,7 @@ void titleScreen() {
 		printf("     S   P       I   N  NN  D   D  R  R     I    F        T\n");
 		printf(" SSSSS   P      III  N   N  DDDD   R   R  IIIII  F        T\n");
 		printf("\n\nCreated By: Matthew Romano");
-		Sleep(3000);
+		Sleep(2500);
 }
 
 // Hides the cursor for a better look
@@ -140,6 +140,4 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 		printf("\n");
 
 	}
-
-	printf("\n"); // for better formatting
 }
