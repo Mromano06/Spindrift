@@ -189,7 +189,7 @@ Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
 }
 
 // Places the AI's pieces  
-Gameboard placeEnemiesPieces(Gameboard gameboard, ListOfPieces* toPlace) {
+Gameboard* placeEnemiesPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
 
 	return gameboard;
 }

@@ -12,6 +12,13 @@
 #define NUMBER_OF_PIECES			    4
 #define MAX_RIGS					    3
 
+typedef enum {
+	OIL_RIG = 1,
+	SPEEDBOAT = 2,
+	TUGBOAT = 3,
+	CONTAINER = 4
+} PieceType;
+
 // TODO: Create enum for piece type to improve readability
 // has all the attributes required for a game piece
 typedef struct {
@@ -20,7 +27,6 @@ typedef struct {
 	int baseDamage;
 	int defence;
 	int movement;
-	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	int pieceType;
 	int ID;
 	// Pieces x/y value

@@ -4,7 +4,7 @@
 // Declaration for coordinate struct and functions
 
 // Default for both is -1
-typedef struct Coordinates {
+typedef struct {
 	int x;
 	int y;
 } Coordinates;

@@ -12,10 +12,10 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces);
 ListOfPieces* enemyPieceSelection(ListOfPieces* enemiesPieces);
 
 // Player piece placement
-Gameboard placePlayersPieces(Gameboard gameboard, ListOfPieces* toPlace);
+Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace);
 
 // AI piece placement
-Gameboard placeEnemiesPieces(Gameboard gameboard, ListOfPieces* toPlace);
+Gameboard* placeEnemiesPieces(Gameboard* gameboard, ListOfPieces* toPlace);
 
 // Sets up the game
 void startGame();
