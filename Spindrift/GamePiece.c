@@ -9,6 +9,7 @@
 // New pieces stats will be decided based on the piece type
 GamePiece createGamePiece(int pieceType) {
 	GamePiece newGamePiece = { 0 };
+	newGamePiece.coords = setupCoordinates(-1, -1); // -1 is default
 	newGamePiece.pieceType = pieceType;
 	newGamePiece.ID = -1; // default ID value 
 
