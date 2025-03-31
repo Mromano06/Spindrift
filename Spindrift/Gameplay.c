@@ -11,7 +11,6 @@
 // Implementation of the gameplay
 
 // Player will chose there pieces here
-// TODO: Add a check to make sure the player has at minimum 1 Piece
 ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 	int currentID = PLAYER_PIECE_ID_MODIFIER;
 	int currentBudget = PIECE_BUDGET;

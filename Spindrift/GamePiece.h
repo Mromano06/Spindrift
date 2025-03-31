@@ -1,4 +1,5 @@
 #pragma once
+#include "Coordinates.h"
 #include <stdbool.h>
 
 // Matthew Romano - March 26th, 2025 - Project Spindrift\
@@ -11,6 +12,7 @@
 #define NUMBER_OF_PIECES			    4
 #define MAX_RIGS					    3
 
+// TODO: Create enum for piece type to improve readability
 // has all the attributes required for a game piece
 typedef struct {
 	int health;
@@ -20,8 +22,9 @@ typedef struct {
 	int movement;
 	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	int pieceType;
-	// ID for players pieces (11-21), enemies pieces (0-10)
 	int ID;
+	// Pieces x/y value
+	Coordinates coords; 
 
 } GamePiece;
 

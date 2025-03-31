@@ -36,6 +36,9 @@
     <ClCompile Include="ListOfPieces.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Coordinates.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menus.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ListOfPieces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coordinates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

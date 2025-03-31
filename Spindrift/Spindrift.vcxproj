@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Coordinates.c" />
     <ClCompile Include="GameBoard.c" />
     <ClCompile Include="GamePiece.c" />
     <ClCompile Include="Gameplay.c" />
@@ -136,6 +137,7 @@
     <ClCompile Include="RulesAndCredits.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Coordinates.h" />
     <ClInclude Include="Gameboard.h" />
     <ClInclude Include="GamePiece.h" />
     <ClInclude Include="Gameplay.h" />
