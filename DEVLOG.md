@@ -49,7 +49,7 @@ Author: Matthew Romano
 - Major Bug fix, solution was broken but found bug with the "menus.h" file inclusion
 - Cursor is hidden while the game is running
 
-- ### v0.1.1
+### v0.1.1
 - The user must now select at least 1 piece during the piece selection menu
 - The AI now select pieces at random (for now this is how that will be handled)
 - The players and enemies oil's rigs will now be created during piece setup
@@ -58,7 +58,7 @@ Author: Matthew Romano
 - Added feature to count the amount of pieces (may be redundant)
 - Minor visual bug fixes
 
-- ### v0.1.2
+### v0.1.2
 - Added enum for piece type instead of using int for readability
 - Added coordinates struct that will be used to compare the pieces coordinates
 - GamePiece includes this new struct and will store its own coordinates
