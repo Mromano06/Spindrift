@@ -7,7 +7,7 @@
 // Implementation of game pieces functions
 
 // New pieces stats will be decided based on the piece type
-GamePiece createGamePiece(int pieceType) {
+GamePiece createGamePiece(PieceType pieceType) {
 	GamePiece newGamePiece = { 0 };
 	newGamePiece.coords = setupCoordinates(-1, -1); // -1 is default
 	newGamePiece.pieceType = pieceType;
@@ -15,32 +15,32 @@ GamePiece createGamePiece(int pieceType) {
 
 	// TODO: Needs a lot of testing/balancing
 	switch (newGamePiece.pieceType) {
-	// oil rig
-	case 1:
+
+	case OIL_RIG:
 		newGamePiece.health = 10;
 		newGamePiece.range = 1;
 		newGamePiece.baseDamage = 1;
 		newGamePiece.defence =1;
 		newGamePiece.movement = 0;
 		break;
-	// tugboat
-	case 2:
+
+	case SPEEDBOAT:
 		newGamePiece.health = 5;
 		newGamePiece.range = 1;
 		newGamePiece.baseDamage = 2;
 		newGamePiece.defence = 2;
 		newGamePiece.movement = 2;
 		break;
-	// speedboat
-	case 3:
+
+	case TUGBOAT:
 		newGamePiece.health = 3;
 		newGamePiece.range = 3;
 		newGamePiece.baseDamage = 4;
 		newGamePiece.defence = 1;
 		newGamePiece.movement = 3;
 		break;
-	// container ship
-	case 4:
+
+	case CONTAINER_SHIP:
 		newGamePiece.health = 8;
 		newGamePiece.range = 2;
 		newGamePiece.baseDamage = 1;
@@ -58,26 +58,22 @@ GamePiece createGamePiece(int pieceType) {
 
 // Displays game piece for testing (and other cases)
 void displayGamePiece(GamePiece toDisplay) {
-	// Oil Rig
-	if (toDisplay.pieceType == 0)
+	if (toDisplay.pieceType == OIL_RIG)
 		printf("Oil Rig\nHealth: %d\nDamage: %d\nDefence: %d\nRange: %d\nMovement: %d",
 			toDisplay.health, toDisplay.baseDamage, toDisplay.defence, toDisplay.range,
 			toDisplay.movement);
 
-	// Tugboat
-	else if (toDisplay.pieceType == 1)
+	else if (toDisplay.pieceType == SPEEDBOAT)
 		printf("Tugboat\nHealth: %d\nDamage: %d\nDefence: %d\nRange: %d\nMovement: %d",
 			toDisplay.health, toDisplay.baseDamage, toDisplay.defence, toDisplay.range,
 			toDisplay.movement);
 
-	// Speedboat
-	else if (toDisplay.pieceType == 2)
+	else if (toDisplay.pieceType == TUGBOAT)
 		printf("Speedboat\nHealth: %d\nDamage: %d\nDefence: %d\nRange: %d\nMovement: %d",
 			toDisplay.health, toDisplay.baseDamage, toDisplay.defence, toDisplay.range,
 			toDisplay.movement);
 
-	// Container Ship
-	else if (toDisplay.pieceType == 3)
+	else if (toDisplay.pieceType == CONTAINER_SHIP)
 		printf("Container Ship\nHealth: %d\nDamage: %d\nDefence: %d\nRange: %d\nMovement: %d",
 			toDisplay.health, toDisplay.baseDamage, toDisplay.defence, toDisplay.range,
 			toDisplay.movement);

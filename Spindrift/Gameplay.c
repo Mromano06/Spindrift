@@ -34,7 +34,7 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 
 		case 13: // enter key
 			if (arrowPos == 1 && currentBudget >= SPEEDBOAT_COST) {
-				temp = createGamePiece(2); // 2 is for speedboat
+				temp = createGamePiece(SPEEDBOAT);
 				temp.ID = currentID;
 				playersPieces = addPieceToList(temp);
 				currentBudget -= SPEEDBOAT_COST;
@@ -48,11 +48,11 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 			if (arrowPos == 2 && currentBudget >= TUGBOAT_COST) {
-				temp = createGamePiece(3); // 3 is for tugboat
+				temp = createGamePiece(TUGBOAT);
 				temp.ID = currentID;
 				playersPieces = addPieceToList(temp);
 				currentBudget -= TUGBOAT_COST;
-				currentID++; // Increment the ID upon piece creation
+				currentID++;
 				printf("\n\nTugboat selected");
 				Sleep(750);
 			}
@@ -62,11 +62,11 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 			if (arrowPos == 3 && currentBudget >= CONTAINER_SHIP_COST) {
-				temp = createGamePiece(4);  // 4 is for container ship
+				temp = createGamePiece(CONTAINER_SHIP);
 				temp.ID = currentID;
 				playersPieces = addPieceToList(temp);
 				currentBudget -= CONTAINER_SHIP_COST;
-				currentID++; // Increment the ID upon piece creation
+				currentID++;
 				printf("\n\nContainer ship selected");
 				Sleep(750);
 			}
@@ -104,13 +104,13 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 		case 72: // up arrow
-			if (arrowPos == 1) // loops back around
+			if (arrowPos == 1)						// loops back around
 				arrowPos = SELECTION_MENU_OPTIONS + 1;
 			pieceSelectionMenu(--arrowPos, currentBudget);
 			break;
 
 		case 80: // down arrow
-			if (arrowPos == SELECTION_MENU_OPTIONS) // loops back around
+			if (arrowPos == SELECTION_MENU_OPTIONS) // ditto ^
 				arrowPos = 0;
 			pieceSelectionMenu(++arrowPos, currentBudget);
 			break;
@@ -132,36 +132,36 @@ ListOfPieces* enemyPieceSelection(ListOfPieces* enemiesPieces) {
 
 	// Creates the oil rigs before anything else
 	for (int i = 0; i < MAX_RIGS; i++) {
-		temp = createGamePiece(1); // 1 for rig
+		temp = createGamePiece(OIL_RIG);
 		temp.ID = ENEMY_RIG_ID_MODIFIER + i;
 		enemiesPieces = addPieceToList(temp);
 	}
 
 		while (currentBudget > 0) {
-			selection = (rand() % (NUMBER_OF_PIECES)) + 1;
+			selection = (rand() % (NUMBER_OF_PIECES)) + 2;
 
-			if (selection == 1 && currentBudget >= SPEEDBOAT_COST) {
-				temp = createGamePiece(2); // 2 is for speedboat
+			if (selection == SPEEDBOAT && currentBudget >= SPEEDBOAT_COST) {
+				temp = createGamePiece(SPEEDBOAT);
 				temp.ID = currentID;
 				enemiesPieces = addPieceToList(temp);
 				currentBudget -= SPEEDBOAT_COST;
-				currentID++; // Increment the ID upon piece creation
+				currentID++;
 			}
 
-			if (selection == 2 && currentBudget >= TUGBOAT_COST) {
-				temp = createGamePiece(3); // 3 is for tugboat
+			if (selection == TUGBOAT && currentBudget >= TUGBOAT_COST) {
+				temp = createGamePiece(TUGBOAT);
 				temp.ID = currentID;
 				enemiesPieces = addPieceToList(temp);
 				currentBudget -= TUGBOAT_COST;
-				currentID++; // Increment the ID upon piece creation
+				currentID++;
 			}
 
-			if (selection == 3 && currentBudget >= CONTAINER_SHIP_COST) {
-				temp = createGamePiece(4); // 4 is for container ship
+			if (selection == CONTAINER_SHIP && currentBudget >= CONTAINER_SHIP_COST) {
+				temp = createGamePiece(CONTAINER_SHIP);
 				temp.ID = currentID;
 				enemiesPieces = addPieceToList(temp);
 				currentBudget -= CONTAINER_SHIP_COST;
-				currentID++; // Increment the ID upon piece creation
+				currentID++;
 			}	
 		}
 

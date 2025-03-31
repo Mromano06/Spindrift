@@ -16,7 +16,7 @@ typedef enum {
 	OIL_RIG = 1,
 	SPEEDBOAT = 2,
 	TUGBOAT = 3,
-	CONTAINER = 4
+	CONTAINER_SHIP = 4
 } PieceType;
 
 // TODO: Create enum for piece type to improve readability
@@ -27,7 +27,7 @@ typedef struct {
 	int baseDamage;
 	int defence;
 	int movement;
-	int pieceType;
+	PieceType pieceType;
 	int ID;
 	// Pieces x/y value
 	Coordinates coords; 
@@ -35,7 +35,7 @@ typedef struct {
 } GamePiece;
 
 // New pieces stats will be decided based on the piece type
-GamePiece createGamePiece(int pieceType);
+GamePiece createGamePiece(PieceType pieceType);
 
 // Displays game piece for testing (and other cases)
 void displayGamePiece(GamePiece toDisplay);
