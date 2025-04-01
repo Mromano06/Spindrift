@@ -99,7 +99,8 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 			else {
 				printf("Piece selection confirmed");
-				exit(EXIT_SUCCESS);
+				Sleep(750);
+				return playersPieces;
 				break;
 			}
 
@@ -200,15 +201,15 @@ Gameboard* placeEnemiesPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
 // TODO: Add difficulty and game length
 void startGame() {
 	srand(time(0));
-;	Gameboard gameboard = createGameboard(); 
+;	Gameboard* gameboard = createGameboard(); 
 	ListOfPieces* playersPieces = (ListOfPieces*)malloc(sizeof(ListOfPieces));
 	ListOfPieces* enemiesPieces = (ListOfPieces*)malloc(sizeof(ListOfPieces));
 
 	// Returns 0 for new game and 1 for load game
 	if (mainMenuStart() == 1) {
-		pieceSelection(playersPieces);
-		// This is where a difficulty could be added
-		enemyPieceSelection(enemiesPieces);
+		playersPieces = pieceSelection(playersPieces);
+		enemiesPieces = enemyPieceSelection(enemiesPieces);
+		gameboard = placePlayersPieces(gameboard, playersPieces);
 
 	}
 	else {
