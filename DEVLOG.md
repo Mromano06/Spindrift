@@ -49,7 +49,7 @@ Author: Matthew Romano
 - Major Bug fix, solution was broken but found bug with the "menus.h" file inclusion
 - Minor visual bug fixes
 
-- ### v0.1.1
+### v0.1.1
 - Added enum for piece type instead of using int for readability
 - Added coordinates struct that will be used to compare the pieces coordinates
 - GamePiece includes this new struct and will store its own coordinates
