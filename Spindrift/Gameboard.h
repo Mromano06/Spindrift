@@ -23,7 +23,7 @@ typedef struct {
 } Gameboard;
 
 // Game board setup
-Gameboard createGameboard();
+Gameboard* createGameboard();
 
 // Adds a piece at a specific position
 Gameboard* placePiece(Gameboard* currentBoard, GamePiece toPlace);
