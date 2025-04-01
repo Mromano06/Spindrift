@@ -4,26 +4,38 @@
 // Matthew Romano - March 26th, 2025 - Project Spindrift
 // Implementation of the game board and its functions
 
-#define BOARD_LENGTH	20
-#define BOARD_WIDTH		20
+#define BOARD_LENGTH			20
+#define BOARD_WIDTH				20
+
+#define P_START_X_LOW_LIMIT		 4
+#define P_START_X_UP_LIMIT		16
+#define P_START_Y_LOW_LIMIT		 0
+#define P_START_Y_UP_LIMIT		 6
+
+#define E_START_X_LOW_LIMIT		 4
+#define E_START_X_UP_LIMIT		16
+#define E_START_Y_LOW_LIMIT		14
+#define E_START_Y_UP_LIMIT		20 
 
 typedef struct {
 	// this is to keep track of pieces
 	int board[BOARD_LENGTH][BOARD_WIDTH];
-
 } Gameboard;
 
 // Game board setup
 Gameboard createGameboard();
 
 // Adds a piece at a specific position
-Gameboard* placePiece(Gameboard* currentBoard, int ID, int x, int y);
+Gameboard* placePiece(Gameboard* currentBoard, GamePiece toPlace);
 
 // Removes a piece based on its ID
-Gameboard* removePiece(Gameboard* currentBoard, int ID, int x, int y);
+Gameboard* removePiece(Gameboard* currentBoard, GamePiece toPlace);
 
 // Checks to see if a spot on the board is free
-bool isSpotFree(Gameboard gameboard, Coordinates toCheck);
+bool isSpotFree(Gameboard* gameboard, Coordinates toCheck);
+
+// Checks if the coordinate is a valid start placement
+bool isValidStartingPlacement(Coordinates inputCoords);
 
 // Shows the gameboard
 void displayGameboard(Gameboard toDisplay);

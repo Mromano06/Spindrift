@@ -28,7 +28,7 @@ Gameboard* placePiece(Gameboard* currentBoard, GamePiece toPlace) {
 }
 
 // Removes specific piece from the board at certain position
-Gameboard* placePiece(Gameboard* currentBoard, GamePiece toPlace) {
+Gameboard* removePiece(Gameboard* currentBoard, GamePiece toPlace) {
 	// Searches the board to find the id of the piece and removes it
 	if (currentBoard->board[toPlace.coords.x][toPlace.coords.y] == toPlace.ID)
 		currentBoard->board[toPlace.coords.x][toPlace.coords.y] = 0;
@@ -39,10 +39,21 @@ Gameboard* placePiece(Gameboard* currentBoard, GamePiece toPlace) {
 }
 
 // Takes a coordinate and the gameboard to compare
-bool isSpotFree(Gameboard gameboard, Coordinates toCheck) {
-	if (gameboard.board[toCheck.x][toCheck.y] == 0)
+bool isSpotFree(Gameboard* gameboard, Coordinates toCheck) {
+	if (gameboard->board[toCheck.x][toCheck.y] == 0)
 		return true;
 
+	return false;
+}
+
+// Checks if the coordinates are valid starting locations for the player
+bool isValidStartingPlacement(Coordinates inputCoords) {
+	// Compares x and y coordinates to the upper and lower limits allowed
+	if (inputCoords.x >= P_START_X_LOW_LIMIT && inputCoords.x <= P_START_X_UP_LIMIT) {
+		if (inputCoords.y >= P_START_Y_LOW_LIMIT && inputCoords.y <= P_START_Y_UP_LIMIT)
+			return true;
+	}
+	
 	return false;
 }
 

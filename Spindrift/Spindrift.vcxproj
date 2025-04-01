@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Coordinates.c" />
-    <ClCompile Include="GameBoard.c" />
+    <ClCompile Include="Gameboard.c" />
     <ClCompile Include="GamePiece.c" />
     <ClCompile Include="Gameplay.c" />
     <ClCompile Include="ListOfPieces.c" />

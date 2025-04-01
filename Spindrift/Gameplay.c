@@ -168,7 +168,7 @@ ListOfPieces* enemyPieceSelection(ListOfPieces* enemiesPieces) {
 	return enemiesPieces;
 }
 
-// TODO: Add coordinate struct and a function to check if a spot is empty
+// TODO: Get coordinates of requested piece placement
 // Allows the players to place their pieces
 // 75 for left, 77 for right, 72 for up, 80 for down, 27 for esc, 13 for enter
 Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
@@ -177,12 +177,13 @@ Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
 	Coordinates inputCoords = setupCoordinates(x, y);
 
 	while (toPlace != NULL) {
-		current->pieceData.coords = inputCoords;
-		// Get coordinates of requested piece placement
-		// compare to gameboard and see if the spot is taken
-		// place if it is free and don't if it isnt
-		// move to next piece if placement was successful
-		gameboard = placePiece(gameboard, current); // Update this
+		if (isSpotFree(gameboard, inputCoords) && isValidStartingPlacement(inputCoords)) {
+			current->pieceData.coords = inputCoords;
+			gameboard = placePiece(gameboard, current->pieceData);
+			current = toPlace->next;
+		}
+		else 
+			printf("\n\nThis spot is taken or invalid.");
 		
 	}
 

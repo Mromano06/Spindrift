@@ -27,7 +27,7 @@
     <ClCompile Include="GamePiece.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameBoard.c">
+    <ClCompile Include="Gameboard.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Gameplay.c">
