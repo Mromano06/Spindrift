@@ -172,8 +172,9 @@ ListOfPieces* enemyPieceSelection(ListOfPieces* enemiesPieces) {
 // Allows the players to place their pieces
 // 75 for left, 77 for right, 72 for up, 80 for down, 27 for esc, 13 for enter
 Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
+	int x = -1, y = -1;
 	ListOfPieces* current = toPlace;
-	int x = 0, y = 0;
+	Coordinates inputCoords = setupCoordinates(x, y);
 
 	while (toPlace != NULL) {
 		current->pieceData.ID;
@@ -181,7 +182,7 @@ Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
 		// compare to gameboard and see if the spot is taken
 		// place if it is free and don't if it isnt
 		// move to next piece if placement was successful
-		gameboard = placePiece(gameboard, current->pieceData.ID, x, y);
+		gameboard = placePiece(gameboard, current->pieceData.ID, x, y); // Update this
 		
 	}
 

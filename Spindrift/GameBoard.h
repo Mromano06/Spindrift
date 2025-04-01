@@ -22,6 +22,9 @@ Gameboard* placePiece(Gameboard* currentBoard, int ID, int x, int y);
 // Removes a piece based on its ID
 Gameboard* removePiece(Gameboard* currentBoard, int ID, int x, int y);
 
+// Checks to see if a spot on the board is free
+bool isSpotFree(Gameboard gameboard, Coordinates toCheck);
+
 // Shows the gameboard
 void displayGameboard(Gameboard toDisplay);
 

@@ -39,6 +39,14 @@ Gameboard* removePiece(Gameboard* currentBoard, int ID, int x, int y) {
 	return currentBoard;
 }
 
+// Takes a coordinate and the gameboard to compare
+bool isSpotFree(Gameboard gameboard, Coordinates toCheck) {
+	if (gameboard.board[toCheck.x][toCheck.y] == 0)
+		return true;
+
+	return false;
+}
+
 // Prints out the game board's elements
 void displayGameboard(Gameboard toDisplay) {
 	for (int i = 0; i < BOARD_LENGTH*3; i++)

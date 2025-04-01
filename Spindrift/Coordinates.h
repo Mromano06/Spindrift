@@ -11,3 +11,4 @@ typedef struct {
 
 // Sets a pieces coordinates
 Coordinates setupCoordinates(int x, int y);
+
