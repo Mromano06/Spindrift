@@ -49,3 +49,16 @@ Author: Matthew Romano
 - Major Bug fix, solution was broken but found bug with the "menus.h" file inclusion
 - Minor visual bug fixes
 
+- ### v0.1.1
+- Added enum for piece type instead of using int for readability
+- Added coordinates struct that will be used to compare the pieces coordinates
+- GamePiece includes this new struct and will store its own coordinates
+- Board will check to see if the piece is placed in a valid location
+- Limits set on where a new piece can be placed during game setup
+- Definitions for these limits included in the game board header file
+- Updated placePiece() to take game board and game piece
+- Updated the game board struct to use a pointer and be dynamically allocated
+- Just hit 100 commits as of April 1st, 2025 there will be many more to come
+- Minor bug fixes
+
+
