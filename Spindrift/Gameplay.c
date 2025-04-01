@@ -177,12 +177,12 @@ Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
 	Coordinates inputCoords = setupCoordinates(x, y);
 
 	while (toPlace != NULL) {
-		current->pieceData.ID;
+		current->pieceData.coords = inputCoords;
 		// Get coordinates of requested piece placement
 		// compare to gameboard and see if the spot is taken
 		// place if it is free and don't if it isnt
 		// move to next piece if placement was successful
-		gameboard = placePiece(gameboard, current->pieceData.ID, x, y); // Update this
+		gameboard = placePiece(gameboard, current); // Update this
 		
 	}
 

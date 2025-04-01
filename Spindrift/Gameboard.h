@@ -17,10 +17,13 @@ typedef struct {
 Gameboard createGameboard();
 
 // Adds a piece at a specific position
-Gameboard* placePiece(Gameboard* currentBoard, int ID, int x, int y);
+Gameboard* placePiece(Gameboard* currentBoard, GamePiece toPlace);
 
 // Removes a piece based on its ID
 Gameboard* removePiece(Gameboard* currentBoard, int ID, int x, int y);
+
+// Checks to see if a spot on the board is free
+bool isSpotFree(Gameboard gameboard, Coordinates toCheck);
 
 // Shows the gameboard
 void displayGameboard(Gameboard toDisplay);
