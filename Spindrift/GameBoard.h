@@ -37,6 +37,9 @@ bool isSpotFree(Gameboard* gameboard, Coordinates toCheck);
 // Checks if the coordinate is a valid start placement
 bool isValidStartingPlacement(Coordinates inputCoords);
 
+// Checks to see if enemy piece placement is valid
+bool isValidEnemyStartingPlacement(Coordinates inputCoords);
+
 // Shows the gameboard
 void displayGameboard(Gameboard toDisplay);
 

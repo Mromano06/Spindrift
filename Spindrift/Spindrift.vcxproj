@@ -134,6 +134,8 @@
     <ClCompile Include="ListOfPieces.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="Menus.c" />
+    <ClCompile Include="PiecePlacement.c" />
+    <ClCompile Include="PieceSelection.c" />
     <ClCompile Include="RulesAndCredits.c" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +145,8 @@
     <ClInclude Include="Gameplay.h" />
     <ClInclude Include="ListOfPieces.h" />
     <ClInclude Include="Menus.h" />
+    <ClInclude Include="PiecePlacement.h" />
+    <ClInclude Include="PieceSelection.h" />
     <ClInclude Include="RulesAndCredits.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
