@@ -63,6 +63,16 @@ bool isValidStartingPlacement(Coordinates inputCoords) {
 	return false;
 }
 
+// Compares sent coordinate to the upper/lower limits of the valid start area
+bool isValidEnemyStartingPlacement(Coordinates inputCoords) {
+	if (inputCoords.x >= E_START_X_LOW_LIMIT && inputCoords.x <= E_START_X_UP_LIMIT) {
+		if (inputCoords.y >= E_START_Y_LOW_LIMIT && inputCoords.y <=E_START_Y_UP_LIMIT)
+			return true;
+	}
+
+	return false;
+}
+
 // Prints out the game board's elements
 void displayGameboard(Gameboard toDisplay) {
 	for (int i = 0; i < BOARD_LENGTH*3; i++)

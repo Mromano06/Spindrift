@@ -193,6 +193,19 @@ Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
 
 // Places the AI's pieces  
 Gameboard* placeEnemiesPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
+	int x = -1, y = -1;
+	ListOfPieces* current = toPlace;
+	Coordinates inputCoords = setupCoordinates(x, y);
+
+	while (toPlace != NULL) {
+		inputCoords.x = rand() % ( // rand() % (upper - lower + 1) + lower;
+		if (isSpotFree(gameboard, inputCoords) && isValidEnemyStartingPlacement(inputCoords)) {
+			current->pieceData.coords = inputCoords;
+			gameboard = placePiece(gameboard, current->pieceData);
+			current = toPlace->next;
+		}
+
+	}
 
 	return gameboard;
 }
