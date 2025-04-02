@@ -25,7 +25,6 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 	system("cls");
 	pieceSelectionMenu(arrowPos, currentBudget);
 
-	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
 	while (1) {
 		int keyPressed = getch(); // takes input
 		switch (keyPressed) {

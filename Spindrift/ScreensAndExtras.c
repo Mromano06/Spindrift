@@ -33,3 +33,10 @@ void hideCursor() {
 	SetConsoleCursorInfo(handle, &cursorInfo);
 
 }
+
+// Sets cursors position, used for menus
+void setCursorPosition(Coordinates cursorPosition) {
+	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD cursorPos = { cursorPosition.x , cursorPosition.y };
+	SetConsoleCursorPosition(consoleHandle, cursorPos);
+}
