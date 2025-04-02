@@ -20,7 +20,7 @@ void startGame() {
 	ListOfPieces* playersPieces = (ListOfPieces*)malloc(sizeof(ListOfPieces));
 	ListOfPieces* enemiesPieces = (ListOfPieces*)malloc(sizeof(ListOfPieces));
 
-	// Returns 0 for new game and 1 for load game
+	// Returns 1 for new game and 2 for load game
 	if (mainMenuStart() == 1) {
 		playersPieces = pieceSelection(playersPieces);
 		enemiesPieces = randomEnemyPieceSelection(enemiesPieces);
