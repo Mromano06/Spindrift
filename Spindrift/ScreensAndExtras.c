@@ -15,7 +15,7 @@ void titleScreen() {
 	printf("     S   P       I   N  NN  D   D  R  R     I    F        T\n");
 	printf(" SSSSS   P      III  N   N  DDDD   R   R  IIIII  F        T\n");
 	printf("\n\nCreated By: Matthew Romano");
-	printf("\n\nv0.1.1");
+	printf("\n\nPre-Alpha v0.1.1");
 	Sleep(2500);
 }
 
