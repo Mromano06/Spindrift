@@ -80,6 +80,7 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 	Coordinates cursorPosition = setupCoordinates(0, 0);
 	setCursorPosition(cursorPosition);
 	printf("Ship Selection Menu\n\n");
+	printf("\33[2K\r"); // Clears the next line (required)
 	printf("Remaining Budget: %d\n\n", currentBudget);
 
 	char options[][OPTION_NAME_LENGTH] = { "Speedboat",
@@ -105,4 +106,6 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 		printf("\n");
 
 	}
+
+	printf("\n\33[2K\r");// Clears message
 }

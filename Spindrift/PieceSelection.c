@@ -36,11 +36,11 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 				playersPieces = addPieceToList(temp);
 				currentBudget -= SPEEDBOAT_COST;
 				currentID++; // Increment the ID upon piece creation
-				printf("\n\nSpeedboat selected");
+				printf("Speedboat selected");
 				Sleep(750);
 			}
 			else if (arrowPos == 1 && currentBudget < SPEEDBOAT_COST) {
-				printf("\n\nYou cannot afford this piece");
+				printf("You cannot afford this piece");
 				Sleep(750);
 			}
 
@@ -50,11 +50,11 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 				playersPieces = addPieceToList(temp);
 				currentBudget -= TUGBOAT_COST;
 				currentID++;
-				printf("\n\nTugboat selected");
+				printf("Tugboat selected");
 				Sleep(750);
 			}
 			else if (arrowPos == 2 && currentBudget < TUGBOAT_COST) {
-				printf("\n\nYou cannot afford this piece");
+				printf("You cannot afford this piece");
 				Sleep(750);
 			}
 
@@ -64,21 +64,21 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 				playersPieces = addPieceToList(temp);
 				currentBudget -= CONTAINER_SHIP_COST;
 				currentID++;
-				printf("\n\nContainer ship selected");
+				printf("Container ship selected");
 				Sleep(750);
 			}
 			else if (arrowPos == 3 && currentBudget < CONTAINER_SHIP_COST) {
-				printf("\n\nYou cannot afford this piece");
+				printf("You cannot afford this piece");
 				Sleep(750);
 			}
 
 			if (arrowPos == 4) {
 				if (currentBudget == PIECE_BUDGET) { // Makes sure 1 piece is selected
-					printf("\n\nPlease select at least 1 piece");
+					printf("Please select at least 1 piece");
 					Sleep(750);
 				}
 				else {
-					printf("\n\nPiece selection confirmed");
+					printf("Piece selection confirmed");
 					Sleep(750);
 					return playersPieces;
 				}
@@ -89,7 +89,7 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 
 		case 27: // escape key quits
 			if (currentBudget == PIECE_BUDGET) { // Makes sure 1 piece is selected
-				printf("\n\nPlease select at least 1 piece");
+				printf("Please select at least 1 piece");
 				Sleep(750);
 				pieceSelectionMenu(arrowPos, currentBudget);
 				break;
