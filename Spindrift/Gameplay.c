@@ -1,8 +1,10 @@
 #include "Gameplay.h"
 #include "Gameboard.h"
+#include "ListOfPieces.h"
+#include "PiecePlacement.h"
+#include "PieceSelection.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <windows.h>
 #include <time.h>
 #include "Menus.h"

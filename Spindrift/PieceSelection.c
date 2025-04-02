@@ -1,6 +1,8 @@
 #include "PieceSelection.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
 #include "Menus.h"
 
 // Matthew Romano - March 27th, 2025 - Project Spindrift

@@ -3,10 +3,10 @@
 #include "ListOfPieces.h"
 
 // Matthew Romano - April 1st, 2025 - Project Spindrift
-// Function declarations for piece placement
+// Function declarations for selection
 
-// Player piece placement
-Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace);
+// Player piece selection
+ListOfPieces* pieceSelection(ListOfPieces* playersPieces);
 
 // Random AI piece placement
-Gameboard* placeEnemiesPiecesRandomly(Gameboard* gameboard, ListOfPieces* toPlace);
+ListOfPieces* randomEnemyPieceSelection(ListOfPieces* enemiesPieces);
