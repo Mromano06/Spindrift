@@ -25,6 +25,7 @@ void startGame() {
 		playersPieces = pieceSelection(playersPieces);
 		enemiesPieces = randomEnemyPieceSelection(enemiesPieces);
 		gameboard = placePlayersPieces(gameboard, playersPieces);
+		gameboard = placeEnemiesPiecesRandomly(gameboard, enemiesPieces);
 
 	}
 	else {

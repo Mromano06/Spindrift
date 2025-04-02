@@ -45,6 +45,9 @@
     <ClCompile Include="PieceSelection.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ScreensAndExtras.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menus.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PieceSelection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreensAndExtras.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

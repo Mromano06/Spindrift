@@ -137,6 +137,7 @@
     <ClCompile Include="PiecePlacement.c" />
     <ClCompile Include="PieceSelection.c" />
     <ClCompile Include="RulesAndCredits.c" />
+    <ClCompile Include="ScreensAndExtras.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coordinates.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="PiecePlacement.h" />
     <ClInclude Include="PieceSelection.h" />
     <ClInclude Include="RulesAndCredits.h" />
+    <ClInclude Include="ScreensAndExtras.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

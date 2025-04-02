@@ -13,12 +13,6 @@
 #define TUGBOAT_COST				 20
 #define CONTAINER_SHIP_COST			 40
 
-// Makes printing the title easier 
-void titleScreen();
-
-// For style
-void hideCursor();
-
 // Starting point of the main menu
 int mainMenuStart();
 
