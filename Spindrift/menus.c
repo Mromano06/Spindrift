@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <windows.h>
 #include "Menus.h"
-#include "ScreensAndExtras.h"
 
 // Matthew Romano - March 24th, 2025 - Project Spindrift
 // Menus module implementation using conio.h
@@ -14,12 +13,9 @@ int mainMenuStart() {
 
 	hideCursor();
 	titleScreen();
-
-	// clears window and calls menu for the first time
 	system("cls");
 	mainMenu(arrowPos);
 
-	// infinite loop for now
 	while (1) {
 		int keyPressed = getch(); // takes input
 		switch (keyPressed) {
@@ -60,14 +56,13 @@ int mainMenuStart() {
 
 // this is seperate so that the user can scroll though menu options
 void mainMenu(int arrowPos) {
-	system("cls");
+	Coordinates cursorPosition = setupCoordinates(0, 0);
+	setCursorPosition(cursorPosition);
 	printf("Main Menu\n\n");
 
-	// saves all menu options as an array of strings
 	char options[][OPTION_NAME_LENGTH] = { "New Game",
 		"Load Game", "Rules", "Credits", "Exit" };
 
-	// prints out menu options 1 by 1
 	for (int i = 0; i < MAIN_MENU_OPTIONS; i++) {
 		if (arrowPos == i + 1)  // print arrow if at that position
 			printf("--> %s\n", options[i]);
@@ -82,12 +77,11 @@ void mainMenu(int arrowPos) {
 
 // Menu for player piece selection
 void pieceSelectionMenu(int arrowPos, int currentBudget) {
-	// 1 = rig, 2 = tugboat, 3 = speedboat, 4 = container ship
-	system("cls");
+	Coordinates cursorPosition = setupCoordinates(0, 0);
+	setCursorPosition(cursorPosition);
 	printf("Ship Selection Menu\n\n");
 	printf("Remaining Budget: %d\n\n", currentBudget);
 
-	// saves all menu options as an array of strings
 	char options[][OPTION_NAME_LENGTH] = { "Speedboat",
 		"Tugboat", "Container", "Finish Seletion" };
 
@@ -95,10 +89,8 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 	for (int i = 0; i < SELECTION_MENU_OPTIONS; i++) {
 		if (arrowPos == i + 1)  // print arrow if at that position
 			printf("--> %s", options[i]);
-
 		else
 			printf("    %s", options[i]);
-
 
 		// shows the cost with the ships
 		if (i == 0)
