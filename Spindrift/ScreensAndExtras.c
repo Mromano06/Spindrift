@@ -1,6 +1,7 @@
 #include "ScreensAndExtras.h"
 #include <stdio.h>
 #include <windows.h>
+#include <conio.h>
 
 // Matthew Romano - April 2nd, 2025 - Project Spindrift
 // FUnction bodys for the screens and extras
@@ -9,14 +10,32 @@
 // pretty lame right now
 void titleScreen() {
 	printf("\n");
-	printf(" SSSSS   PPPPP  III  N   N  DDDD   RRRR   IIIII  FFFFF  TTTTT\n");
-	printf(" S       P   P   I   NN  N  D   D  R   R    I    F        T\n");
-	printf("  SSS    PPPPP   I   N N N  D   D  RRRR     I    FFFF     T\n");
-	printf("     S   P       I   N  NN  D   D  R  R     I    F        T\n");
-	printf(" SSSSS   P      III  N   N  DDDD   R   R  IIIII  F        T\n");
-	printf("\n\nCreated By: Matthew Romano");
+	printf("      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"); 
+	printf("          #####  ######  ######  ####    ##  ######   ######   ######  ######  ######    \n");
+	printf("         ##      ##  ##    ##    ## ##   ##  ##   ##  ##   ##    ##    ##        ##      \n");
+	printf("          ####   ######    ##    ##  ##  ##  ##   ##  ######     ##    ######    ##      \n");
+	printf("             ##  ##        ##    ##   ## ##  ##   ##  ##   ##    ##    ##        ##      \n");
+	printf("         #####   ##      ######  ##    ####  ######   ##   ##  ######  ##        ##      \n");
+	printf("      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("           ~~~~~~~~    ~~~~   ~~~~    ~~~~~~~~    ~~~~~~~~    ~~~~   ~~~~    ~~~~~~~~    \n"); 
+	printf("               ~~~~~  ~~~~  ~~~~  ~~~~  ~~~~  ~~~~   ~~~~~  ~~~~  ~~~~  ~~~~  ~~~~       \n");
+	printf("                   ~~~~  ~~~~  ~~~~  ~~~~  ~~~~  ~~  ~~~~  ~~~~  ~~~~  ~~~~  ~~          \n");
+	printf("                       ~~ ~~  ~~~~  ~~~~  ~~~~  ~~~~  ~~ ~~ ~~~~  ~~~~  ~~~~             \n");
+	printf("                           ~~~~ ~~  ~~~~ ~~~~  ~~~~ ~~  ~~~~  ~~~~ ~~                    \n");
+	printf("                                  ~~  ~~~~  ~~~~  ~~~~ ~~  ~~~~                          \n");
+	printf("                                      ~~~~  ~~~~  ~~  ~~                                 \n");
+	printf("\n\nPress ENTER to start...");
+	printf("\n\n\n\n\n\n\n\nCreated By: Matthew Romano");
 	printf("\n\nPre-Alpha v0.1.1");
-	Sleep(2500);
+
+	while (1) {
+		int enterPressed = getch();
+		switch (enterPressed) {
+		case 13:
+			return;
+			break;
+		}
+	}
 }
 
 // Hides the cursor for a better look
