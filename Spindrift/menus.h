@@ -1,6 +1,7 @@
 #pragma once
 #include "RulesAndCredits.h"
 #include "ScreensAndExtras.h"
+#include "PiecePlacement.h"
 
 // Matthew Romano - March 24th, 2025 - Project Spindrift
 // Function declarations for the menus
@@ -22,3 +23,7 @@ void mainMenu(int arrowPos);
 
 // Allows user to select pieces
 void pieceSelectionMenu(int arrowPos, int currentBudget);
+
+// Allows user to place pieces
+Gameboard* piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos);
+

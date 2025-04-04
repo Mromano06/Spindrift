@@ -109,3 +109,11 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 
 	printf("\n\33[2K\r");// Clears message
 }
+
+// Places the pieces on the gameboard
+Gameboard* piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos) {
+	Coordinates cursorPosition = setupCoordinates(0, 0);
+	setCursorPosition(cursorPosition);
+
+	displayGameboardWithCursor(gameboard);
+}

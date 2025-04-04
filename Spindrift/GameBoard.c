@@ -96,6 +96,11 @@ void displayGameboard(Gameboard toDisplay) {
 	
 }
 
+// Prints the gameboard witht he current selected element
+void displayGameboardWithCursor(Gameboard* gameboard) {
+
+}
+
 // Finds pieces x coordinate
 int getXofPiece(Gameboard* currentBoard, int ID) {
 	int x;
