@@ -61,4 +61,17 @@ Author: Matthew Romano
 - Just hit 100 commits as of April 1st, 2025 there will be many more to come
 - Minor bug fixes
 
+### v0.1.2
+- Next update will be v0.2.0 and will include piece placement
+- Added separate files for both piece selection/creation
+- Added separate files for extra and screen functions
+- AI can randomly place pieces within the given limits
+- The menu no longer flickers after an input is made
+- Fixed a bug that caused the budget to print out an extra digit
+- User must press enter to begin the game
+- Updated title screen visually
+- Updated file names
+- Minor bug fixes
+
+
 
