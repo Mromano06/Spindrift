@@ -1,4 +1,5 @@
 #include "Gameboard.h"
+#include "ScreensAndExtras.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -98,6 +99,8 @@ void displayGameboard(Gameboard toDisplay) {
 
 // Prints the gameboard witht the current selected element
 void displayGameboardWithCursor(Gameboard* gameboard, Coordinates cursorPos) {
+	Coordinates cursorPosition = setupCoordinates(0, 0);
+	setCursorPosition(cursorPosition);
 	for (int i = 0; i < BOARD_LENGTH * 3; i++)
 		printf("~");
 
@@ -105,15 +108,16 @@ void displayGameboardWithCursor(Gameboard* gameboard, Coordinates cursorPos) {
 	for (int i = 0; i < BOARD_LENGTH; i++) {
 		printf("|");
 		for (int j = 0; j < BOARD_WIDTH; j++) {
-			printf("~");
+			if (i == cursorPos.x && j == cursorPos.y) 
+				printf("X"); // X at current location
+			else
+				printf("~");
+
 			if (j == BOARD_WIDTH - 1)
 				printf("|");
 			else
 				printf("  ");
 
-			if (i == cursorPos.x && j == cursorPos.y)
-				printf("\33[2K\r"); // Clears the next line (required)
-				printf("X"); // X at current location
 		}
 		printf("\n");
 	}

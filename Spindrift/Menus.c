@@ -110,9 +110,44 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 	printf("\n\33[2K\r");// Clears message
 }
 
+// 75 for left, 77 for right, 72 for up, 80 for down, 27 for esc, 13 for enter
 // Places the pieces on the gameboard
-void piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos) {
-	Coordinates cursorPosition = setupCoordinates(0, 0);
-	setCursorPosition(cursorPosition);
+Coordinates piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos) {
 	displayGameboardWithCursor(gameboard, cursorPos);
+
+	while (1) {
+		int keyPressed = getch(); // takes input
+		switch (keyPressed) {
+
+		case 13: // enter key
+				return cursorPos;
+			break;
+
+		case 72: // up arrow
+			if (cursorPos.y < 19)
+				cursorPos.y++;
+			displayGameboardWithCursor(gameboard, cursorPos);
+			break;
+
+		case 80: // down arrow
+			if (cursorPos.y > 0)
+				cursorPos.y--;
+			displayGameboardWithCursor(gameboard, cursorPos);
+			break;
+		
+		case 75: // up arrow
+			if (cursorPos.x > 0)
+				cursorPos.x--;
+			displayGameboardWithCursor(gameboard, cursorPos);
+			break;
+
+		case 77: // down arrow
+			if (cursorPos.x < 19)
+				cursorPos.x++;
+			displayGameboardWithCursor(gameboard, cursorPos);
+			break;
+		}
+	}
+
+	return cursorPos;
 }

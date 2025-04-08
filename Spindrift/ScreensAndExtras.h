@@ -10,6 +10,5 @@ void titleScreen();
 // Hides the cursor
 void hideCursor();
 
-
 // Sets cursors position, used for menus
 void setCursorPosition(Coordinates cursorPosition);
