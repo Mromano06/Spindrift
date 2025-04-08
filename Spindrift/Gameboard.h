@@ -7,6 +7,7 @@
 #define BOARD_LENGTH			20
 #define BOARD_WIDTH				20
 
+//TODO: Edit the limits because they are sideways currently
 #define P_START_X_LOW_LIMIT		 4
 #define P_START_X_UP_LIMIT		16
 #define P_START_Y_LOW_LIMIT		 0
