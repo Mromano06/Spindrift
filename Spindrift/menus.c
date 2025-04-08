@@ -111,9 +111,8 @@ void pieceSelectionMenu(int arrowPos, int currentBudget) {
 }
 
 // Places the pieces on the gameboard
-Gameboard* piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos) {
+void piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos) {
 	Coordinates cursorPosition = setupCoordinates(0, 0);
 	setCursorPosition(cursorPosition);
-
-	displayGameboardWithCursor(gameboard);
+	displayGameboardWithCursor(gameboard, cursorPos);
 }
