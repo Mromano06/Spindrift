@@ -44,7 +44,7 @@ bool isValidEnemyStartingPlacement(Coordinates inputCoords);
 void displayGameboard(Gameboard toDisplay);
 
 // Shows cursor on gameboard
-void displayGameboardWithCursor(Gameboard* gameboard);
+void displayGameboardWithCursor(Gameboard* gameboard, Coordinates cursorPos);
 
 // Finds the x coordinate of a piece
 int getXofPiece(Gameboard* currentBoard, int ID);

@@ -25,5 +25,5 @@ void mainMenu(int arrowPos);
 void pieceSelectionMenu(int arrowPos, int currentBudget);
 
 // Allows user to place pieces
-Gameboard* piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos);
+void piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos);
 

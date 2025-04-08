@@ -6,11 +6,12 @@
 // Allows the players to place their pieces
 // 75 for left, 77 for right, 72 for up, 80 for down, 27 for esc, 13 for enter
 Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
-	int x = -1, y = -1;
+	int x = 0, y = 0;
 	ListOfPieces* current = toPlace;
 	Coordinates inputCoords = setupCoordinates(x, y);
 
 	while (toPlace != NULL) {
+		piecePlacementMenu(gameboard, inputCoords);
 		if (isSpotFree(gameboard, inputCoords) && isValidStartingPlacement(inputCoords)) {
 			current->pieceData.coords = inputCoords;
 			gameboard = placePiece(gameboard, current->pieceData);
