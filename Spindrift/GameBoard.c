@@ -97,6 +97,7 @@ void displayGameboard(Gameboard toDisplay) {
 	
 }
 
+// TODO: make sure piece ID is printed at selected spot
 // Prints the gameboard witht the current selected element
 void displayGameboardWithCursor(Gameboard* gameboard, Coordinates cursorPos) {
 	Coordinates cursorPosition = setupCoordinates(0, 0);
