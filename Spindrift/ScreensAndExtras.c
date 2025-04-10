@@ -26,7 +26,7 @@ void titleScreen() {
 	printf("                                      ~~~~  ~~~~  ~~  ~~                                 \n");
 	printf("\n\nPress ENTER to start...");
 	printf("\n\n\n\n\n\n\n\nCreated By: Matthew Romano");
-	printf("\n\nPre-Alpha v0.1.1");
+	printf("\n\nPre-Alpha v0.1.2");
 
 	while (1) {
 		int enterPressed = getch();

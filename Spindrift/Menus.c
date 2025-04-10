@@ -123,14 +123,14 @@ Coordinates piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos) {
 				return cursorPos;
 			break;
 
-		// These are all backwards but working
-		case 80:
+		// These may all backwards but they work
+		case 72:
 			if (cursorPos.x < BOARD_LENGTH - 1)
 				cursorPos.x++;
 			displayGameboardWithCursor(gameboard, cursorPos);
 			break;
 
-		case 72:
+		case 80:
 			if (cursorPos.x > 0)
 				cursorPos.x--;
 			displayGameboardWithCursor(gameboard, cursorPos);

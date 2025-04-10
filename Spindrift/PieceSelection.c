@@ -12,7 +12,7 @@
 ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 	int currentID = PLAYER_PIECE_ID_MODIFIER;
 	int currentBudget = PIECE_BUDGET;
-	int arrowPos = 1; // Starts at top of the menu
+	int arrowPos = 1;
 	GamePiece temp; // Needed to set ID
 
 	// Creates the oil rigs before anything else
@@ -73,7 +73,7 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 			if (arrowPos == 4) {
-				if (currentBudget == PIECE_BUDGET) { // Makes sure 1 piece is selected
+				if (currentBudget == PIECE_BUDGET) {
 					printf("Please select at least 1 piece");
 					Sleep(750);
 				}
@@ -88,7 +88,7 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			break;
 
 		case 27: // escape key quits
-			if (currentBudget == PIECE_BUDGET) { // Makes sure 1 piece is selected
+			if (currentBudget == PIECE_BUDGET) {
 				printf("Please select at least 1 piece");
 				Sleep(750);
 				pieceSelectionMenu(arrowPos, currentBudget);
@@ -102,7 +102,7 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 			}
 
 		case 72: // up arrow
-			if (arrowPos == 1)						// loops back around
+			if (arrowPos == 1)	
 				arrowPos = SELECTION_MENU_OPTIONS + 1;
 			pieceSelectionMenu(--arrowPos, currentBudget);
 			break;
@@ -117,7 +117,7 @@ ListOfPieces* pieceSelection(ListOfPieces* playersPieces) {
 
 	}
 
-	return NULL; // Dont need this but just in case
+	return NULL;
 }
 
 // Random AI piece selection
