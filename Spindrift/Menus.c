@@ -123,27 +123,28 @@ Coordinates piecePlacementMenu(Gameboard* gameboard, Coordinates cursorPos) {
 				return cursorPos;
 			break;
 
-		case 72: // up arrow
-			if (cursorPos.y < 19)
-				cursorPos.y++;
+		// These are all backwards but working
+		case 80:
+			if (cursorPos.x < BOARD_LENGTH - 1)
+				cursorPos.x++;
 			displayGameboardWithCursor(gameboard, cursorPos);
 			break;
 
-		case 80: // down arrow
-			if (cursorPos.y > 0)
-				cursorPos.y--;
-			displayGameboardWithCursor(gameboard, cursorPos);
-			break;
-		
-		case 75: // up arrow
+		case 72:
 			if (cursorPos.x > 0)
 				cursorPos.x--;
 			displayGameboardWithCursor(gameboard, cursorPos);
 			break;
+		
+		case 75:
+			if (cursorPos.y > 0)
+				cursorPos.y--;
+			displayGameboardWithCursor(gameboard, cursorPos);
+			break;
 
-		case 77: // down arrow
-			if (cursorPos.x < 19)
-				cursorPos.x++;
+		case 77:
+			if (cursorPos.y < BOARD_WIDTH - 1)
+				cursorPos.y++;
 			displayGameboardWithCursor(gameboard, cursorPos);
 			break;
 		}

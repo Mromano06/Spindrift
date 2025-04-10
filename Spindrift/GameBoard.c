@@ -106,19 +106,15 @@ void displayGameboardWithCursor(Gameboard* gameboard, Coordinates cursorPos) {
 		printf("~");
 
 	printf("\n");
-	for (int i = 0; i < BOARD_LENGTH; i++) {
-		printf("|");
+	for (int i = BOARD_LENGTH - 1; i >= 0; i--) {
 		for (int j = 0; j < BOARD_WIDTH; j++) {
-			if (i == cursorPos.x && j == cursorPos.y) 
-				printf("X"); // X at current location
+			if (i == cursorPos.x && j == cursorPos.y)
+				printf("X");
 			else
 				printf("~");
 
-			if (j == BOARD_WIDTH - 1)
-				printf("|");
-			else
-				printf("  ");
-
+			if (j < BOARD_WIDTH - 1)
+				printf("  "); // spacing
 		}
 		printf("\n");
 	}

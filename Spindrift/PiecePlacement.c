@@ -7,9 +7,8 @@
 // TODO: Get coordinates of requested piece placement
 // Allows the players to place their pieces
 Gameboard* placePlayersPieces(Gameboard* gameboard, ListOfPieces* toPlace) {
-	int x = 0, y = 0;
 	ListOfPieces* current = toPlace;
-	Coordinates inputCoords = setupCoordinates(x, y);;
+	Coordinates inputCoords = setupCoordinates(0, 0);
 
 	while (toPlace != NULL) {
 		Coordinates selectedCoords = piecePlacementMenu(gameboard, inputCoords);
