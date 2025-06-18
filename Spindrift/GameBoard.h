@@ -7,16 +7,15 @@
 #define BOARD_LENGTH			20
 #define BOARD_WIDTH				20
 
-//TODO: Edit the limits because they are sideways currently
-#define P_START_X_LOW_LIMIT		 4
-#define P_START_X_UP_LIMIT		16
-#define P_START_Y_LOW_LIMIT		 0
-#define P_START_Y_UP_LIMIT		 6
+#define P_START_X_LOW_LIMIT		 0
+#define P_START_X_UP_LIMIT		 6
+#define P_START_Y_LOW_LIMIT		 4
+#define P_START_Y_UP_LIMIT		15
 
-#define E_START_X_LOW_LIMIT		 4
-#define E_START_X_UP_LIMIT		16
-#define E_START_Y_LOW_LIMIT		14
-#define E_START_Y_UP_LIMIT		20 
+#define E_START_X_LOW_LIMIT		15
+#define E_START_X_UP_LIMIT		19
+#define E_START_Y_LOW_LIMIT		 4
+#define E_START_Y_UP_LIMIT		15
 
 typedef struct {
 	// this is to keep track of pieces

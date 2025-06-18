@@ -94,12 +94,13 @@ void displayGameboard(Gameboard toDisplay) {
 
 	for (int i = 0; i < BOARD_LENGTH * 3; i++)
 		printf("~");
-	
+
 }
 
 // TODO: make sure piece ID is printed at selected spot
-// Prints the gameboard witht the current selected element
+// Prints the gameboard with the current selected element
 void displayGameboardWithCursor(Gameboard* gameboard, Coordinates cursorPos) {
+	printf("\n\n Current spot %d, %d", cursorPos.x, cursorPos.y); // TESTING!!!
 	Coordinates cursorPosition = setupCoordinates(0, 0);
 	setCursorPosition(cursorPosition);
 	for (int i = 0; i < BOARD_LENGTH * 3; i++)
@@ -121,6 +122,7 @@ void displayGameboardWithCursor(Gameboard* gameboard, Coordinates cursorPos) {
 
 	for (int i = 0; i < BOARD_LENGTH * 3; i++)
 		printf("~");
+
 
 }
 
